@@ -4,3 +4,17 @@ block variable
 
 
 block content
+    // begin discount
+    //- section#discount.discount.section(style="background-image: url('../img/first_bg.webp')")
+    section#discount.discount.section
+        .container_center
+            .discount__bg.desktop
+            .discount__content
+                h1.discount__title
+                    span Скидки в пансионате “Забота и Любовь”
+                ul.discount__list.list
+                    each item in ['При оплате за 4 месяца скидка 200 рублей', '3 дня проживания БЕСПЛАТНО (при оплате за месяц)', 'Пеленки/памперсы/гигиеническое белье на 30 дней в подарок (при оплате за 3 месяца)', 'Скидки для ветеранов ВОВ' ]
+                        li.discount__item
+                            span=item
+
+    // end discount

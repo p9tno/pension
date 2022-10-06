@@ -1,0 +1,82 @@
+.social {
+    width: 100%;
+
+    @media (min-width: 768px) {
+        display: flex;
+        align-items: center;
+
+    }
+    // justify-content: space-between;
+
+    &__label {
+        @media (min-width: 768px) {
+            margin-right: 1.875em;
+
+            span {
+                font-size: 1.0625em;
+                color: $color_success;
+                font-weight: bold;
+            }
+        }
+
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+
+        justify-content: space-between;
+
+    }
+
+    &__item {
+        font-size: 0.75em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+            margin-right: 1em;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+    }
+
+    &__link {
+        color: $main_color;
+        text-decoration: none;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.0625em;
+        height: 2.0625em;
+        border: 0.1875em solid $main_color;
+        border-radius: 50%;
+
+        @media (min-width: 768px) {
+            transform: scale(1);
+
+            transition: transform 0.3s;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+
+        }
+
+    }
+
+    &__viber {
+        color: #9747FF;
+        border-color: #9747FF;
+    }
+
+    &__whatsapp {
+        color: #4ECB71;
+        border-color: #4ECB71;
+    }
+
+}

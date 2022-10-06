@@ -1,26 +1,70 @@
 /* Header
  ----------------------------------------------------------------------------- */
 .header {
-	padding: 1em 0;
-	background-color: #ddd;
+	background-color: $color_white;
+	padding-bottom: 1.25em;
+
+	@media (min-width: 768px) {
+		box-shadow: 0 4px 7px 0 #00000021;
+		padding-bottom: 0;
+	}
 
 	&__content {
-
 		@extend .container_center;
 		margin: auto;
+
+		@media (min-width: 768px) {
+			position: relative;
+		}
+	}
+
+	&__top {
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
+		justify-content: space-between;
+		padding: 1em 0 1.5em;
+
+		@media (max-width: 767px) {
+			position: relative;
+			z-index: 11;
+		}
+		@media (min-width: 768px) {
+			padding: 2em 0;
+			margin-left: 11.875em;
+		}
+	}
+
+	&__social {
+		width: 36%;
+
+		@media (min-width: 768px) {
+			width: auto;
+		}
+	}
+
+	// &__bottom {}
+
+	&__logo {
+		position: relative;
+		z-index: 11;
+
+		@media (min-width: 768px) {
+			position: absolute;
+			top: 1.5em;
+			left: 1.25em;
+			z-index: auto;
+		}
+
 	}
 
 	&__toggle {
 		position: absolute;
 
 		@media (max-width: 767px) {
-			top: 1em;
-			right: 1em;
-			width: 1.25em;
-			height: 0.875em;
+			top: 4.75em;
+			right: 1.25em;
+			width: 1.375em;
+			height: 1em;
 			color: $main_color;
 			border: 0.125em solid;
 			border-left: 0;
@@ -82,150 +126,213 @@
 	&__nav {}
 }
 
-// stiky menu
-.stiky {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 1;
-}
-
-.navbar {}
-
-@media (max-width: 767px) {
-	.navbar {
-		position: fixed;
-		right: -18.75em;
-		top: 0;
-		bottom: 0;
-		background-color: $color_white;
-		width: 18.75em;
-		z-index: 10;
-		overflow: hidden;
-		padding: 5em 1em 2em;
-		transition: right 0.3s;
-		box-shadow: 0 0 1em rgba(#000, .1);
-
-		// height: 100%;
-		// overflow-y: auto;
-
-		&_open {
-			right: 0;
-		}
-	}
-}
-
-@media (max-width: 767px) {
-	.nav_open_bg {
-		background: rgba(0, 110, 255, 0.3);
-		position: fixed;
-		top: 0;
-		// right: 0;
-		bottom: 0;
-		left: -11em;
-		width: 11em;
-		z-index: 8;
-		transition: left 0.3s;
-
-		&_open {
-			left: 0;
-		}
-	}
-
-}
-
-.menu {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+.logo {
+	display: inline-block;
+	width: 6.125em;
+	height: 2.625em;
 
 	@media (min-width: 768px) {
-		display: flex;
-
+		width: 8.5em;
+		height: 3.5625em;
 	}
 
-	&-item {
-		padding-bottom: 0.5em;
+	img {
+		width: 100%;
+		height: 100%;
+
+		object-fit: cover;
+	}
+}
+// stiky menu
+// .stiky {
+// 	position: fixed;
+// 	top: 0;
+// 	left: 0;
+// 	width: 100%;
+// 	z-index: 1;
+// }
+
+// .navbar {}
+
+.header {
+	@media (max-width: 767px) {
+		.navbar {
+			position: fixed;
+			right: 20em;
+			top: 0;
+			bottom: 0;
+			background-color: $color_white;
+			width: 20em;
+			z-index: 10;
+			overflow: hidden;
+			margin-top: 8em;
+			padding: 0 1em 2em;
+			text-align: center;
+			transition: right 0.3s;
+
+			height: 100%;
+			overflow-y: auto;
+
+			&_open {
+				right: 0;
+			}
+		}
+	}
+
+	.menu {
+		margin: 0;
+		padding: 0;
+		list-style: none;
 
 		@media (min-width: 768px) {
-			margin-right: 0.5em;
+			display: flex;
+			justify-content: space-between;
+		}
 
-			&:last-child {
-				margin-right: 0;
+		&-item {
+			padding-bottom: 1.75em;
+
+			@media (min-width: 768px) {
+				margin-right: 0.5em;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+
+			a {
+				@media (min-width: 768px) {
+					position: relative;
+				}
+
+				text-decoration: none;
+				color: #2C2C2C;
+
+				font-size: 1.125em;
+				font-weight: bold;
+
+				@media (min-width: 768px) {
+					&:after {
+						content: '';
+						position: absolute;
+						bottom: -0.5em;
+						left: 50%;
+						width: 0;
+						opacity: 0;
+						border-bottom: 0.0625em solid;
+						transition: 0.3s;
+					}
+
+				}
+
+				i {
+					display: inline-block;
+					margin-left: 0.5em;
+					font-size: 0.75em;
+					transform: scale(1);
+					transition: transform 0.3s;
+				}
+
+			}
+
+			&:hover {
+				> a {
+					// color: #303C6C;
+
+					@media (min-width: 768px) {
+						&:after {
+							left: 0;
+							width: 100%;
+							opacity: 1;
+						}
+					}
+				}
+
+				i {
+					transform: scale(-1);
+				}
+			}
+
+		}
+
+		&-item-has-children {
+
+			position: relative;
+
+			.menu-item {
+				padding-bottom: 0.75em;
+
+				&:last-child {
+					padding-bottom: 0;
+				}
+			}
+
+			&:hover {
+				.sub-menu {
+					height: auto;
+					opacity: 1;
+					top: 80%;
+					visibility: visible;
+				}
 			}
 		}
+
+	}
+
+	.sub-menu {
+		margin: auto;
+		padding: 0 2em;
+		list-style: none;
+
+		// position: absolute;
+		// min-width: 14em;
+		width: max-content;
+		height: 0;
+		opacity: 0;
+		visibility: hidden;
+		overflow: hidden;
+		// top: 100%;
+		// left: 50%;
+		// transform: translate(-50%, 0);
+		transition: 0.3s;
+		background: $color_white;
+		z-index: 10;
 
 		a {
-			font-family: $second_font_family;
-			color: $main_color;
-			text-decoration: none;
-			text-transform: uppercase;
-			letter-spacing: 0.05em;
+			font-size: 0.85em;
+		}
+
+		@media (max-width: 767px) {
+			.menu-item {
+				&:first-child {
+					padding-top: 1em;
+				}
+			}
+		}
+
+		@media (min-width: 768px) {
+			margin: 0;
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			transform: translate(-50%, 0);
+			padding: 0.5em 2em 1em;
+			box-shadow: 0 0 4px rgb(0 0 0 / 40%);
 		}
 	}
 
-	&-item-has-children {
-		position: relative;
+	.current-menu-item > a {
+		// color: #303C6C;
 
 		&:after {
-			font-family: 'icomoon';
-			content: '\ea36';
-			display: inline-block;
-			transition: 0.3s;
-			transform: rotate(0deg);
-			cursor: pointer;
-		}
-
-		&:hover {
-			&:after {
-				transform: rotate(180deg);
-			}
-
-			.sub-menu {
-				height: auto;
-				opacity: 1;
-				top: 100%;
-				visibility: visible;
-			}
+			left: 0;
+			width: 100%;
+			opacity: 1;
 		}
 	}
 
-}
-
-.sub-menu {
-	margin: 0;
-	padding: 0.5em 1em 1em;
-	list-style: none;
-
-	position: absolute;
-	// min-width: 14em;
-	width: max-content;
-	height: 0;
-	opacity: 0;
-	visibility: hidden;
-	overflow: hidden;
-	top: 130%;
-	left: 50%;
-	transform: translate(-50%, 0);
-	transition: 0.3s;
-	background: $color_white;
-	z-index: 10;
-
-	a {
-		font-size: 0.75em;
+	.nav-open {
+		overflow: hidden;
 	}
 
-	@media (min-width: 768px) {
-		box-shadow: 0 0 4px rgb(0 0 0 / 40%);
-
-	}
-}
-
-.current-menu-item > a {
-	color: $color_success;
-}
-
-.nav-open {
-	overflow: hidden;
 }

@@ -1,25 +1,67 @@
 header.header
     .header__content
-        .header__logo
-            a.logo(href="/")
-                img(src="/img/logo.png", alt="alt")
+        .header__top
+            .header__email
+                .email
+                    a(href="mailto:pansionat1111@gmai.com").email__link
+                        i.email__icon.icon-mail
+                        span.email__content.desktop pansionat1111@gmai.com
+            .header__phone
+                .phone
+                    a(href="tel:+375443979911").phone__link
+                        i.phone__icon.icon-phone
+                        span.phone__content.desktop +375 (44) 397 99 11
+                        span.phone__time.desktop (24 / 7)
+            .header__social
+                .social
+                    .social__label.desktop
+                        span Написать нам
+                    ul.social__list
+                        li.social__item
+                            a(href="viber://chat?number=%2B375443979911").social__link.social__viber
+                                i.icon-viber
+                        li.social__item
+                            a(href="https://wa.me/+375443979911").social__link.social__whatsapp
+                                i.icon-whatsapp
+
+
+        .header__bottom
+            .header__logo
+                a.logo(href="/")
+                    img(src="/img/logo.png", alt="logo")
+            .header__nav
+                nav.navbar#navbar
+                    ul.menu
+                        li.menu-item.current-menu-item
+                            a(href="#") Главная
+
+                        li.menu-item.menu-item-has-children
+                            a(href="#") Услуги
+                                i.icon-arrow-bottom
+                            ul.sub-menu
+                                li.menu-item
+                                    a(href="#") Услуга 1
+                                li.menu-item
+                                    a(href="#") Услуга Услуга 2
+                        li.menu-item
+                            a(href="#") Фото
+                        li.menu-item
+                            a(href="#") Психолог
+                        li.menu-item
+                            a(href="#") Блог
+                        li.menu-item
+                            a(href="#") Отзывы
+                        li.menu-item.menu-item-has-children
+                            a(href="#") Города
+                                i.icon-arrow-bottom
+                            ul.sub-menu
+                                each item in [1, 2, 3, 4]
+                                    li.menu-item
+                                        a(href="#") Минск
+                        li.menu-item
+                            a(href="#") Вакансии
+                        li.menu-item
+                            a(href="#") Контакты
+
 
         .header__toggle
-
-        .header__nav
-            nav.navbar#navbar
-                ul.menu
-                    li.menu-item.current-menu-item
-                        a(href="#") Новости
-                    li.menu-item
-                        a(href="#") Объявления
-                    li.menu-item
-                        a(href="#") F.A.Q.
-                    li.menu-item
-                        a(href="#") Контакты
-                    li.menu-item.menu-item-has-children
-                        a(href="#") Важное
-                        ul.sub-menu
-                            each item in [1, 2, 3, 4]
-                                li.menu-item
-                                    a(href="#") Важный пункт меню

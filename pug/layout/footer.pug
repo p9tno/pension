@@ -1,6 +1,72 @@
 footer.footer
     .footer__content
-        p
-        | &copy; 2016 |
-        i.fa.fa-github(aria-hidden='true') &nbsp;
-        a(href='#') View Source
+        .footer__row
+            .footer__col
+                .footer__logo
+                    a.logo(href="/")
+                        img(src="/img/logo.png", alt="logo")
+                .footer__info
+                    span Официальный сайт. <br> © <script type="text/javascript">document.write(new Date().getFullYear());</script> Все права защищены.
+                .footer__img
+                    img(src="/img/minzdrav.jpg")
+            .footer__col
+                .footer__nav
+                    nav.navbar
+                        ul.menu
+                            li.menu-item.current-menu-item
+                                a(href="#") Главная
+                            li.menu-item
+                                a(href="#") Услуги
+                            li.menu-item
+                                a(href="#") Фото
+                            li.menu-item
+                                a(href="#") Психолог
+                            li.menu-item
+                                a(href="#") Блог
+                        ul.menu
+                            li.menu-item
+                                a(href="#") Отзывы
+                            li.menu-item
+                                a(href="#") Города
+                            li.menu-item
+                                a(href="#") Вакансии
+                            li.menu-item
+                                a(href="#") Контакты
+
+
+            .footer__col
+                .footer__phone
+                    .phone
+                        a(href="tel:+375443979911").phone__link
+                            i.phone__icon.icon-phone
+                            span.phone__content +375 (44) 397 99 11
+                            span.phone__time (24 / 7)
+                .footer__social
+                    .social
+                        .social__label
+                            span Написать нам
+                        ul.social__list
+                            li.social__item
+                                a(href="viber://chat?number=%2B375443979911").social__link.social__viber
+                                    i.icon-viber
+                            li.social__item
+                                a(href="https://wa.me/+375443979911").social__link.social__whatsapp
+                                    i.icon-whatsapp
+                .footer__email
+                    .email
+                        a(href="mailto:pansionat1111@gmai.com").email__link
+                            i.email__icon.icon-mail
+                            span.email__content pansionat1111@gmai.com
+
+    .footer__content
+        .footer__row
+            .footer__col
+                .footer__adress
+                    span ИП Богомолова Е.Н., г.Минск, ул. Казинца, 121-99, УНП193077402, выд. Минским горисполкомом 12.09.18
+
+            .footer__col
+                .developer
+                    a.developer__logo(href="https://top-pro.by/" target="_blank")
+                        img(src="/img/logo_top_pro.svg")
+                    .developer__label
+                        span Разработка и продвижение

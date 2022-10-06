@@ -12,13 +12,13 @@ $(document).ready(function() {
     };
     openMobileNav();
 
-    // function activeNav() {
-    //     $('.menu-item').on('click', function() {
-    //         $('.menu-item').removeClass('current-menu-item');
-    //         $(this).addClass('current-menu-item');
-    //     })
-    // };
-    // activeNav();
+    function activeNav() {
+        $('.menu-item').on('click', function() {
+            $('.menu-item').removeClass('current-menu-item');
+            $(this).addClass('current-menu-item');
+        })
+    };
+    activeNav();
 
 
     function collapsed() {
