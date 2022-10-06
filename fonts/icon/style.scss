@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?emjvh7');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?emjvh7#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?emjvh7') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?emjvh7') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?emjvh7##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?l7zbgo');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?l7zbgo#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?l7zbgo') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?l7zbgo') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?l7zbgo##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,29 +27,99 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-play {
+  &:before {
+    content: $icon-play; 
+  }
+}
+.icon-glass {
+  &:before {
+    content: $icon-glass; 
+  }
+}
+.icon-arrow-bottom {
+  &:before {
+    content: $icon-arrow-bottom; 
+  }
+}
+.icon-arrow-right {
+  &:before {
+    content: $icon-arrow-right; 
+  }
+}
+.icon-arrow-top {
+  &:before {
+    content: $icon-arrow-top; 
+  }
+}
+.icon-mail {
+  &:before {
+    content: $icon-mail; 
+  }
+}
+.icon-question {
+  &:before {
+    content: $icon-question; 
+  }
+}
+.icon-viber {
+  &:before {
+    content: $icon-viber; 
+  }
+}
+.icon-whatsapp {
+  &:before {
+    content: $icon-whatsapp; 
+  }
+}
+.icon-quote {
+  &:before {
+    content: $icon-quote; 
+  }
+}
+.icon-star {
+  &:before {
+    content: $icon-star; 
+  }
+}
+.icon-hand {
+  &:before {
+    content: $icon-hand; 
+  }
+}
 .icon-home {
   &:before {
     content: $icon-home; 
   }
 }
-.icon-clock2 {
+.icon-main-home {
   &:before {
-    content: $icon-clock2; 
+    content: $icon-main-home; 
   }
 }
-.icon-calendar {
+.icon-plus {
   &:before {
-    content: $icon-calendar; 
+    content: $icon-plus; 
   }
 }
-.icon-printer {
+.icon-plus-bold {
   &:before {
-    content: $icon-printer; 
+    content: $icon-plus-bold; 
   }
 }
-.icon-arrow-down {
+.icon-car {
   &:before {
-    content: $icon-arrow-down; 
+    content: $icon-car; 
+  }
+}
+.icon-phone {
+  &:before {
+    content: $icon-phone; 
+  }
+}
+.icon-list {
+  &:before {
+    content: $icon-list; 
   }
 }
 

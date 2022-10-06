@@ -1,20 +1,21 @@
 /* Global variables */
 /* ======================================================================== */
-$main_font_family: "Roboto";
+$main_font_family: "Raleway";
 $second_font_family: "Roboto Slab";
 $main_color: #000;
 $main_line_height: 1.2;
 $main_font_size: 1em;
 
-$container_width: 80em;
-
+// $container_width: 71.376em;
+$container_width: 71.874em;
 $footer_height: auto;
 
 // Color collection for elements
+$color_success: #37A38D;
+$color_warning: #F4976C;
+$color_info: #4560CD;
+
 $color_primary: #7b8287;
-$color_success: #36a566;
-$color_info: #03a9f4;
-$color_warning: #fca33e;
 $color_danger: #ff1a1a;
 $color_white: #ffffff;
 

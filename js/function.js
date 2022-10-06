@@ -1,41 +1,3 @@
-var app = {
-    pageScroll: '',
-    lgWidth: 1200,
-    mdWidth: 992,
-    smWidth: 768,
-    resized: false,
-    iOS: function () {
-        return navigator.userAgent.match( /iPhone|iPad|iPod/i );
-    },
-    touchDevice: function () {
-        return navigator.userAgent.match( /iPhone|iPad|iPod|Android|BlackBerry|Opera Mini|IEMobile/i );
-    }
-};
-
-function isLgWidth() {
-    return $( window ).width() >= app.lgWidth;
-} // >= 1200
-function isMdWidth() {
-    return $( window ).width() >= app.mdWidth && $( window ).width() < app.lgWidth;
-} //  >= 992 && < 1200
-function isSmWidth() {
-    return $( window ).width() >= app.smWidth && $( window ).width() < app.mdWidth;
-} // >= 768 && < 992
-function isXsWidth() {
-    return $( window ).width() < app.smWidth;
-} // < 768
-function isIOS() {
-    return app.iOS();
-} // for iPhone iPad iPod
-function isTouch() {
-    return app.touchDevice();
-} // for touch device
-
-
-
-
-
-
 $(document).ready(function() {
 
 
@@ -50,13 +12,13 @@ $(document).ready(function() {
     };
     openMobileNav();
 
-    function activeNav() {
-        $('.menu-item').on('click', function() {
-            $('.menu-item').removeClass('current-menu-item');
-            $(this).addClass('current-menu-item');
-        })
-    };
-    activeNav();
+    // function activeNav() {
+    //     $('.menu-item').on('click', function() {
+    //         $('.menu-item').removeClass('current-menu-item');
+    //         $(this).addClass('current-menu-item');
+    //     })
+    // };
+    // activeNav();
 
 
     function collapsed() {
@@ -132,26 +94,12 @@ $(document).ready(function() {
     };
     doDrop();
 
-    $('.js-slider').slick({
-        dots: true,
-        // prevArrow: '<i class="icon-left"></i>',
-        // nextArrow: '<i class="icon-right"></i>',
-        speed: 1000,
-        adaptiveHeight: true,
-        responsive: [
-            {
-                breakpoint: 576,
-                settings: {
-                    arrows:false,
-                }
-            },
-        ]
-    })
 
-    $('.select').select2({
-        placeholder: $(this).data('placeholder'),
-        minimumResultsForSearch: Infinity
-    });
+
+    // $('.select').select2({
+    //     placeholder: $(this).data('placeholder'),
+    //     minimumResultsForSearch: Infinity
+    // });
 
     // Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
     function stikyMenu() {
@@ -230,63 +178,46 @@ $(document).ready(function() {
 
 // start animate numbers
 
-function onVisible( selector, callback, repeat = false ) {
+// function onVisible( selector, callback, repeat = false ) {
+//
+//     let options = {
+//         threshold: [ 0.5 ]
+//     };
+//     let observer = new IntersectionObserver( onEntry, options );
+//     let elements = document.querySelectorAll( selector );
+//
+//     for ( let elm of elements ) {
+//         observer.observe( elm );
+//     }
+//
+//     function onEntry( entry ) {
+//         entry.forEach( change => {
+//             let elem = change.target;
+//             // console.log(change);
+//             // console.log(elem.innerHTML);
+//             if ( change.isIntersecting ) {
+//                 if ( !elem.classList.contains( 'show' ) || repeat ) {
+//                     elem.classList.add( 'show' );
+//                     callback( elem );
+//                 }
+//             }
+//         } );
+//     }
+// }
 
-    let options = {
-        threshold: [ 0.5 ]
-    };
-    let observer = new IntersectionObserver( onEntry, options );
-    let elements = document.querySelectorAll( selector );
-
-    for ( let elm of elements ) {
-        observer.observe( elm );
-    }
-
-    function onEntry( entry ) {
-        entry.forEach( change => {
-            let elem = change.target;
-            // console.log(change);
-            // console.log(elem.innerHTML);
-            if ( change.isIntersecting ) {
-                if ( !elem.classList.contains( 'show' ) || repeat ) {
-                    elem.classList.add( 'show' );
-                    callback( elem );
-                }
-            }
-        } );
-    }
-}
-
-    onVisible( '.programsInfo__number', function ( e ) {
-        animateNumber( e, e.innerHTML );
-    } );
-
-    function animateNumber( elem, final, duration = 1000 ) {
-        let start = 0;
-        // console.log('init');
-        setInterval( function () {
-            if ( final > start ) {
-                elem.innerHTML = start++;
-            }
-        }, duration / final );
-    }
+    // onVisible( '.programsInfo__number', function ( e ) {
+    //     animateNumber( e, e.innerHTML );
+    // } );
+    //
+    // function animateNumber( elem, final, duration = 1000 ) {
+    //     let start = 0;
+    //     // console.log('init');
+    //     setInterval( function () {
+    //         if ( final > start ) {
+    //             elem.innerHTML = start++;
+    //         }
+    //     }, duration / final );
+    // }
     // end animate numbers
 
 })
-
-
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.utils.toArray(".panel").forEach((panel, i) => {
-  ScrollTrigger.create({
-    trigger: panel,
-    start: "top top",
-    pin: true,
-    pinSpacing: false
-  });
-});
-
-
-ScrollTrigger.create({
-  snap: 1 / 4 // snap whole page to the closest section!
-});
