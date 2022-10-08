@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../css/swiper-bundle.min.css"/>
-    <link rel="stylesheet" type="text/css" href="../css/aos.css"/>
     <link rel="stylesheet" type="text/css" href="../css/fancybox.min.css"/>
     <link rel="stylesheet" type="text/css" href="../css/style.css"/>
   </head>
@@ -81,6 +80,100 @@
           </div>
         </section>
         <!-- end discount-->
+        <!-- begin personeinfo-->
+        <section class="personeinfo section" id="personeinfo">
+          <div class="container_center">
+            <div class="personeinfo__form">
+              <form class="form form_grid" action="send.php">
+                <input type="hidden" name="subject" value="форма в футоре"/>
+                <input type="hidden" name="notspam" value=""/>
+                <div class="form__row form__row_full form__row_order1">
+                  <textarea type="text" placeholder="Ваш вопрос"></textarea>
+                </div>
+                <div class="form__row form__row_20 form__row_order2">
+                  <select class="select" data-placeholder="Помощь в питании">
+                    <option value=""></option>
+                    <option value="Да">Да</option>
+                    <option value="Нет">Нет</option>
+                  </select>
+                </div>
+                <div class="form__row form__row_20 form__row_order4">
+                  <select class="select" data-placeholder="Малоподвижность">
+                    <option value=""></option>
+                    <option value="Да">Да</option>
+                    <option value="Нет">Нет</option>
+                  </select>
+                </div>
+                <div class="form__row form__row_10 form__row_order3">
+                  <select class="select" data-placeholder="Пол">
+                    <option value=""></option>
+                    <option value="М">М</option>
+                    <option value="Ж">Ж</option>
+                  </select>
+                </div>
+                <div class="form__row form__row_10 form__row_order5">
+                  <input type="number" placeholder="Возраст"/>
+                </div>
+                <div class="form__row form__row_20 form__row_order6">
+                  <input class="tel_js" type="text" required="required" placeholder="+375 (_ _) _ _ _ - _ _ - _ _"/>
+                </div>
+                <div class="form__row form__row_20 form__row_order7">
+                  <div class="button">
+                    <button class="btn btn_form" id="btn_didisabled_js" type="submit">Отправить</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <!-- end personeinfo-->
+        <!-- begin aboutus-->
+        <section class="aboutus section" id="aboutus">
+          <div class="container_center">
+            <div class="aboutus__content">
+              <div class="aboutus__left">
+                <div class="aboutus__gallery">
+                  <div class="aboutusSlider swiper aboutusSlider-js mobile">
+                    <div class="aboutusSlider__wrapper swiper-wrapper">
+                      <div class="aboutusSlider__slide swiper-slide"><a href="/img/gallery.webp" data-fancybox="data-fancybox" data-type="image"><img src="/img/gallery.webp" loading="lazy"/></a></div>
+                      <div class="aboutusSlider__slide swiper-slide"><a href="/img/gallery.webp" data-fancybox="data-fancybox" data-type="image"><img src="/img/gallery.webp" loading="lazy"/></a></div>
+                      <div class="aboutusSlider__slide swiper-slide"><a href="/img/gallery.webp" data-fancybox="data-fancybox" data-type="image"><img src="/img/gallery.webp" loading="lazy"/></a></div>
+                      <div class="aboutusSlider__slide swiper-slide"><a href="/img/gallery.webp" data-fancybox="data-fancybox" data-type="image"><img src="/img/gallery.webp" loading="lazy"/></a></div>
+                      <div class="aboutusSlider__slide swiper-slide"><a href="/img/gallery.webp" data-fancybox="data-fancybox" data-type="image"><img src="/img/gallery.webp" loading="lazy"/></a></div>
+                      <div class="aboutusSlider__slide swiper-slide"><a href="/img/gallery.webp" data-fancybox="data-fancybox" data-type="image"><img src="/img/gallery.webp" loading="lazy"/></a></div>
+                      <div class="aboutusSlider__slide swiper-slide"><a href="/img/gallery.webp" data-fancybox="data-fancybox" data-type="image"><img src="/img/gallery.webp" loading="lazy"/></a></div>
+                      <div class="aboutusSlider__slide swiper-slide"><a href="/img/gallery.webp" data-fancybox="data-fancybox" data-type="image"><img src="/img/gallery.webp" loading="lazy"/></a></div>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                  </div>
+                  <div class="gallery itemForDataFancybox-js desktop">
+                    <div class="gallery__item"><a href="/img/gallery.webp" data-fancybox="data-fancybox" data-type="image"><img src="/img/gallery.webp" loading="lazy"/></a></div>
+                    <div class="gallery__item"><a href="/img/gallery.webp" data-fancybox="data-fancybox" data-type="image"><img src="/img/gallery.webp" loading="lazy"/></a></div>
+                    <div class="gallery__item"><a href="/img/gallery.webp" data-fancybox="data-fancybox" data-type="image"><img src="/img/gallery.webp" loading="lazy"/></a></div>
+                    <div class="gallery__item gallery__item_number"><a href="/img/gallery.webp" data-fancybox="data-fancybox" data-quantity="12" data-type="image"><img src="/img/gallery.webp" loading="lazy"/></a></div>
+                    <div class="gallery__item"><a href="/img/gallery.webp" data-fancybox="data-fancybox" data-type="image"><img src="/img/gallery.webp" loading="lazy"/></a></div>
+                  </div>
+                </div>
+                <ul class="aboutus__list list">
+                  <li class="aboutus__item"><i class="icon-list"></i><span>Оформление</span></li>
+                  <li class="aboutus__item"><i class="icon-hand"></i><span>Реабилитация</span></li>
+                  <li class="aboutus__item"><i class="icon-car"></i><span>Перевозка больных</span></li>
+                  <li class="aboutus__item"><i class="icon-question"></i><span>Досуг</span></li>
+                </ul>
+                <div class="aboutus__action"><a class="btn btn_sm btn_info" href="#">О пансионате</a></div>
+              </div>
+              <div class="aboutus__right">
+                <div class="video">
+                  <div class="video__bg bg" style="background-image: url('/img/video_bg.webp')">
+                    <div class="video__play js-youtubeModal" id="gvrSH5z5EGQ"><i class="icon-play"></i></div>
+                  </div>
+                  <div class="video__label"><span>3D - тур</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end aboutus-->
       </main>
       <footer class="footer">
         <div class="footer__content">
@@ -141,7 +234,25 @@
           </div>
         </div>
       </footer>
+      <!-- Begin Modal modalVideo-->
+      <div class="modal fade modalVideo" id="modalVideo">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <div class="modal-body"> 
+              <div class="modalVideo__wraper"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal modalVideo-->
       <script src="../js/jquery.js"></script>
+      <script src="../js/jquery.maskedinput.min.js"></script>
+      <script src="../js/modal.js"></script>
+      <script src="../js/swiper-bundle.min.js"></script>
+      <script src="../js/slider.js"></script>
+      <script src="../js/select2.min.js"></script>
+      <script src="../js/fancybox.min.js"></script>
+      <script src="../js/form.js"></script>
       <script src="../js/function.js"></script>
     </div>
   </body>

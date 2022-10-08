@@ -1,68 +1,111 @@
 // Style for button and pseudo button for input and link
 
 .btn {
-	color: $btn_default_text_color;
+	color: $color_white;
 	font-family: $main_font_family;
-	font-size: 1em;
-	font-weight: 400;
-	padding: 0.3125em 1em 0.4375em;
-	/* 5/16 */
-	/* 7/16 */
+	font-size: 0.875em;
+	/* 14/16 */
+	font-weight: bold;
+	// padding: 0.875em 4em;
+	padding: 0.875em 1.25em;
 	border: none;
 	outline: none;
 	text-decoration: none;
 	display: inline-block;
 	background-color: $btn_default_bg_color;
 	text-align: center;
-	max-width: 100%;
+	min-width: 15em;
+	// max-width: 100%;
 	cursor: pointer;
-	border-radius: 0.3125em;
-	/* 5/16 */
+	border-radius: 3.625em;
+	letter-spacing: 0.065em;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.16);
 	transition: 0.3s;
 	transition-property: background color border-color;
 
 	// градиент
-	// position: relative;
-	// z-index: 10;
-	// overflow: hidden;
-	//
-	// &:before {
-	// 	content: '';
-	// 	position: absolute;
-	// 	top: 0;
-	// 	left: 0;
-	// 	width: 100%;
-	// 	height: 100%;
-	// 	z-index: -1;
-	// 	transition: width 0.5s;
-	// 	background-image: linear-gradient(90deg, $color_seccondary 0%, #e8b7be 100%);
-	// }
-	//
-	// &:hover {
-	// 	background-color: #fff;
-	// 	color: $color_withe;
-	// 	text-decoration: none;
-	//
-	// 	&:before {
-	// 		width: 150%;
-	// 	}
-	// }
+	position: relative;
+	z-index: 10;
+	overflow: hidden;
+
+	@media (min-width: 768px) {
+		font-size: 1.0625em;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		transition: width 0.5s;
+		background: linear-gradient(163.11deg, #4560CD 11.69%, #6CF4F4 88.4%);
+		// background-image: linear-gradient(90deg, $color_seccondary 0%, #e8b7be 100%);
+	}
 
 	&:hover {
-		background-color: $btn_default_bg_color_hover;
-		color: $btn_default_text_color;
+		// background-color: #fff;
+		// color: $color_withe;
+		text-decoration: none;
+
+		&:before {
+			width: 150%;
+		}
+	}
+
+	&:hover {
+		// background-color: $btn_default_bg_color_hover;
+		// color: $btn_default_text_color;
 	}
 
 	&:active,
 	&:focus {
-		background-color: $btn_default_bg_color_active;
-		color: $btn_default_text_color;
+		// background-color: $btn_default_bg_color_active;
+		// color: $btn_default_text_color;
 	}
 
 	&:disabled {
 		color: red;
 		cursor: not-allowed;
 		// pointer-events: none;
+	}
+
+	&_success {
+		&:before {
+			background: linear-gradient(268.34deg, #3EC8AC 0.85%, #37A38D 99.02%);
+		}
+	}
+
+	&_info {
+		&:before {
+			background: linear-gradient(184.16deg, #38488A 3.39%, #4565E8 96.61%);
+		}
+	}
+
+	&_sm {
+		font-size: 0.875em;
+		min-width: 7em;
+		padding: 0.75em 1.25em;
+
+		@media (min-width: 768px) {
+			font-size: 0.9375em;
+
+		}
+	}
+
+	&_form {
+		min-width: 100%;
+		background: #F4976C;
+		box-shadow: none;
+		border-radius: 0.625em;
+		padding: 0.618em 1.25em;
+
+		&:before {
+			content: none;
+		}
+
 	}
 
 }

@@ -1,0 +1,14 @@
+.personeinfo {
+    &__form {
+        background-color: #FCFCFC;
+        border-radius: 1.25em;
+        box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.12);
+
+        padding: 1.25em 1.75em;
+        @media (min-width: 768px) {
+            padding: 2.5em 4.25em 2.8125em;
+
+        }
+    }
+
+}

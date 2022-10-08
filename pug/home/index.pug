@@ -18,3 +18,100 @@ block content
                             span=item
 
     // end discount
+
+    // begin personeinfo
+    section#personeinfo.personeinfo.section
+        .container_center
+            .personeinfo__form
+                form.form.form_grid(action="send.php")
+                    //- из какой формы на сайте
+                    input(type="hidden" name="subject" value="форма в футоре")
+                    //- проверка спама
+                    input(type="hidden" name="notspam" value="")
+
+                    .form__row.form__row_full.form__row_order1
+                        textarea(type="text", placeholder="Ваш вопрос")
+                    .form__row.form__row_20.form__row_order2
+                        select.select(data-placeholder="Помощь в питании")
+                            option(value="")
+                            option(value="Да") Да
+                            option(value="Нет") Нет
+                    .form__row.form__row_20.form__row_order4
+                        select.select(data-placeholder="Малоподвижность")
+                            option(value="")
+                            option(value="Да") Да
+                            option(value="Нет") Нет
+                    .form__row.form__row_10.form__row_order3
+                        select.select(data-placeholder="Пол")
+                            option(value="")
+                            option(value="М") М
+                            option(value="Ж") Ж
+
+                    .form__row.form__row_10.form__row_order5
+                        input(type="number", placeholder="Возраст")
+                    .form__row.form__row_20.form__row_order6
+                        input.tel_js(type="text", required placeholder="+375 (_ _) _ _ _ - _ _ - _ _")
+                    .form__row.form__row_20.form__row_order7
+                        .button
+                            button.btn.btn_form#btn_didisabled_js(type="submit") Отправить
+
+    // end personeinfo
+
+    // begin aboutus
+    section#aboutus.aboutus.section
+        .container_center
+            .aboutus__content
+                .aboutus__left
+                    .aboutus__gallery
+
+                        .aboutusSlider.swiper.aboutusSlider-js.mobile
+                            .aboutusSlider__wrapper.swiper-wrapper
+                                each item in [ 1,1,1,1,1,1,1,1 ]
+                                    .aboutusSlider__slide.swiper-slide
+                                        a(href="/img/gallery.webp" data-fancybox data-type="image")
+                                            img(src="/img/gallery.webp" loading="lazy")
+                            //- .swiper-pagination
+                            .swiper-scrollbar
+
+                        .gallery.itemForDataFancybox-js.desktop
+                            .gallery__item
+                                a(href="/img/gallery.webp" data-fancybox data-type="image")
+                                    img(src="/img/gallery.webp" loading="lazy")
+                            .gallery__item
+                                a(href="/img/gallery.webp" data-fancybox data-type="image")
+                                    img(src="/img/gallery.webp" loading="lazy")
+                            .gallery__item
+                                a(href="/img/gallery.webp" data-fancybox data-type="image")
+                                    img(src="/img/gallery.webp" loading="lazy")
+                            .gallery__item.gallery__item_number
+                                a(href="/img/gallery.webp" data-fancybox data-quantity=12 data-type="image")
+                                    img(src="/img/gallery.webp" loading="lazy")
+                            .gallery__item
+                                a(href="/img/gallery.webp" data-fancybox data-type="image")
+                                    img(src="/img/gallery.webp" loading="lazy")
+
+                    ul.aboutus__list.list
+                        li.aboutus__item
+                            i.icon-list
+                            span Оформление
+                        li.aboutus__item
+                            i.icon-hand
+                            span Реабилитация
+                        li.aboutus__item
+                            i.icon-car
+                            span Перевозка больных
+                        li.aboutus__item
+                            i.icon-question
+                            span Досуг
+                    .aboutus__action
+                        a(href="#").btn.btn_sm.btn_info О пансионате
+
+                .aboutus__right
+                    .video
+                        .video__bg.bg(style="background-image: url('/img/video_bg.webp')")
+                            .video__play.js-youtubeModal#gvrSH5z5EGQ
+                                i.icon-play
+                        .video__label
+                            span 3D - тур
+
+    // end aboutus
