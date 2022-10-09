@@ -1,0 +1,56 @@
+.callback {
+    .section__title {
+        @media (min-width: 768px) {
+            margin-bottom: 3.125em;
+        }
+    }
+
+    &__form {
+        @media (min-width: 768px) {
+            width: 57.5em;
+        }
+    }
+
+    .form {
+        &_grid {
+            .form__row {
+                width: 100%;
+                margin: 0 0.9375em 0.9375em;
+
+                @media (min-width: 768px) {
+                    margin: 0 0.9375em 1.875em;
+                    width: calc(50% - 1.875em);
+                }
+
+                &_30 {
+                    @media (min-width: 768px) {
+                        width: calc(30% - 1.875em);
+                    }
+                }
+
+                &_70 {
+                    @media (min-width: 768px) {
+                        width: calc(70% - 1.875em);
+                    }
+                }
+
+            }
+        }
+
+        @media (min-width: 768px) {
+            input:not([type]),
+            input[type=date],
+            input[type=email],
+            input[type=number],
+            input[type=password],
+            input[type=search],
+            input[type=tel],
+            input[type=text],
+            input[type=url],
+            textarea {
+                font-size: 1.25em;
+            }
+        }
+
+    }
+}

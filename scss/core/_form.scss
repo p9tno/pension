@@ -68,8 +68,6 @@
 	}
 
 	&__row {
-		// margin-bottom: 1em;
-
 		.btn,
 		input:not([type]),
 		input[type=date],
@@ -98,9 +96,21 @@
 	&__check {
 		display: flex;
 		align-items: center;
+		height: 100%;
+		letter-spacing: 0.065em;
 
 		span {
-			margin-left: 0.5em;
+			margin-left: 1em;
+			font-size: 0.625em;
+
+			@media (min-width: 768px) {
+				font-size: 1.25em;
+			}
+		}
+
+		a {
+			color: $color_success;
+			text-decoration: none;
 		}
 	}
 }
@@ -136,11 +146,15 @@ textarea {
 	}
 
 	&.invalid {
-		border: 0.0625em solid $color_warning;
+		border: 0.0625em solid $color_danger;
+		@include placeholder {
+			color: $color_danger;
+		}
 	}
 	// Placeholder for input +++++++++++++++
 	@include placeholder {
 		color: #9E9E9E;
+		transition: 0.3s;
 	}
 }
 
@@ -169,20 +183,25 @@ input[type=radio] {
 	align-items: center;
 	justify-content: center;
 	flex: none;
-	height: 0.875em;
-	/* 14/16 */
-	width: 0.875em;
-	/* 14/16 */
+	height: 1.25em;
+	width: 1.25em;
 	color: #aaa;
 	background: 0 0;
-	border: 0.0625em solid;
-	/* 1/16 */
+	// border: 0.0625em solid;
+	border: none;
+	border-radius: 50%;
+	background-color: $color_success;
 	overflow: hidden;
 	vertical-align: middle;
 	appearance: none;
 	outline: 0;
 	text-align: center;
 	position: relative;
+	font-size: 0.75em;
+	@media (min-width: 768px) {
+		font-size: 1em;
+
+	}
 
 	&:not(:disabled),
 	&:not(:disabled) {
@@ -223,12 +242,12 @@ input[type=checkbox] {
 	&:checked:before,
 	&:indeterminate:before {
 		content: "";
-		width: 40%;
-		height: 60%;
-		color: #000;
+		width: 30%;
+		height: 50%;
+		color: $color_white;
 		margin-top: -0.1875em;
-		border-right: 0.0625em solid;
-		border-bottom: 0.0625em solid;
+		border-right: 0.125em solid;
+		border-bottom: 0.125em solid;
 		transform: rotate(45deg);
 	}
 

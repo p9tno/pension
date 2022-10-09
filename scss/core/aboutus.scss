@@ -37,7 +37,6 @@
         position: relative;
         color: $color_success;
         margin-bottom: 0.875em;
-        /* 14/16 */
 
         @media (min-width: 768px) {
             margin-bottom: 1.25em;
@@ -174,7 +173,7 @@
                         left: 50%;
                         transform: translate(-50%, -50%);
                         z-index: 2;
-                        font-size: 40px;
+                        font-size: 2.5em;
                         font-weight: bold;
                         color: $color_white;
                         letter-spacing: 0.065em;

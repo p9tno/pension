@@ -16,7 +16,10 @@ body {
 		// font-size: calc(.00838 * 100vw + 0px);
 	}
 
-	@media (min-width: 1921px) {
+	// @media (min-width: 1921px) {
+	// 	font-size: $main_font_size;
+	// }
+	@media (min-width: 1600px) {
 		font-size: $main_font_size;
 	}
 
@@ -55,16 +58,15 @@ body {
 		letter-spacing: 0.065em;
 		font-size: 1em;
 		margin-bottom: 2.5em;
+		line-height: 1.4;
 
 		@media (min-width: 768px) {
 			margin-bottom: 5em;
-
 		}
 
 		span {
 			font-weight: bold;
 			font-size: 1.625em;
-			/* 26/16 */
 
 			@media (min-width: 768px) {
 				font-size: 2.1875em;
@@ -86,6 +88,19 @@ body {
 				}
 			}
 
+		}
+
+		&_noneLine {
+			@media (max-width: 767px) {
+				span {
+					&:last-child {
+						&:after {
+							content: none;
+
+						}
+					}
+				}
+			}
 		}
 
 	}

@@ -1,5 +1,4 @@
 .swiper {
-    // margin-bottom: 3em;
     padding-bottom: 2.5em;
     // border: 1px solid #000;
 }
@@ -29,9 +28,42 @@
     width: 70%;
 
     border-radius: 2.5em;
-    /* 40/16 */
 }
 
 .swiper-scrollbar-drag {
     background: #FF905D;
+}
+
+.swiper-grid-column > .swiper-wrapper {
+    flex-direction: unset !important;
+}
+
+// .swiper-pagination {
+//     padding-top: 2.8125em;
+// }
+
+.swiper-pagination-bullets {
+    // position: initial;
+    // margin: 1.25em 0 0;
+    // width: inherit!important;
+    //
+    // display: flex;
+    // justify-content: center;
+
+}
+
+.swiper-pagination-bullet {
+    background-color: #D9D9D9;
+    opacity: 1;
+    border-radius: 50%;
+    cursor: pointer;
+
+    margin: 0.187em !important;
+    width: 1.125em;
+    height: 1.125em;
+
+    &-active {
+        background-color: #4560CD;
+    }
+
 }

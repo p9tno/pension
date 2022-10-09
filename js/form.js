@@ -90,10 +90,15 @@ function submitForm() {
 }
 submitForm();
 
-$('#check_checked').on('change', function () {
-    if ( $('#check_checked').prop('checked') ) {
-        $('#btn_didisabled_js').attr('disabled', false);
-    } else {
-        $('#btn_didisabled_js').attr('disabled', true);
-    }
-});
+function disabledButton() {
+     $('.check_checked_js').on('change', function () {
+         if ( $(this).prop('checked') ) {
+             $(this).closest('.form').find('.btn_didisabled_js').attr('disabled', false);
+
+         } else {
+             $(this).closest('.form').find('.btn_didisabled_js').attr('disabled', true);
+         }
+     });
+
+ }
+ disabledButton();

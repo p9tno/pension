@@ -144,3 +144,140 @@ block content
                 a.btn.btn_info(href="#") Все акции и скидки
 
     // end stocks
+
+    // begin description
+    section#description.description.section
+        .container_center
+
+            .description__wrap
+                h2.section__title.section__title_noneLine
+                    span Частный дом престарелых <br>
+                    span “Забота и Любовь”
+                .description__bg.bg(href="#" style="background-image: url('/img/description.webp')")
+                .description__content
+                    p Пансионат находится в тихом живописном месте на берегу реки Волма, по соседству с одноименным санаторием "Волма". В этом месте вы не просто получите заботу и любовь, это место вдали от шума и суеты. На территории вы можете увидеть яблоневый сад, пасеку пчёл и тепличные сооружения.
+                    p При желании все это вы можете использовать как свой собственный огород.
+                    p Мы разработали для вас все условия для комфортного проживания и создали уютный уголок для того, чтобы старость не была скучной и однообразной.
+
+    // end description
+
+    // begin rehabilitation
+    section#rehabilitation.rehabilitation.section
+        .container_center
+            h2.section__title
+                span Реабилитация <br>
+                span пожилых
+            .rehabilitation__grid
+                a.rehabilitation__item(href="#")
+                    .rehabilitation__title
+                        span Реабилитация при деменции
+                    .rehabilitation__img
+                        img(src="/img/description.webp" loading="lazy")
+                    .rehabilitation__text
+                        span Индивидуальные беседы и групповые занятия с психологом, ЛФК, контроль приема медикаментов, сбалансированное питание, профессиональный уход 24 часа в сутки.
+                    .rehabilitation__action
+                        .rehabilitation__arrow
+                            i.icon-arrow-right
+                        .rehabilitation__label
+                            span Реабилитация
+
+                a.rehabilitation__item(href="#")
+                    .rehabilitation__title
+                        span Реабилитация при Альцгеймера
+                    .rehabilitation__text
+                        span Включает поддержание интеллектуальной активности, соблюдение режима дня, сбалансированное питание, занятия с психологом, контроль за приемом лекарств.
+                    .rehabilitation__action
+                        .rehabilitation__arrow
+                            i.icon-arrow-right
+                        .rehabilitation__label
+                            span Реабилитация
+
+                a.rehabilitation__item(href="#")
+                    .rehabilitation__title
+                        span Реабилитация при Альцгеймера
+                    .rehabilitation__text
+                        span Включает поддержание интеллектуальной активности, соблюдение режима дня, сбалансированное питание, занятия с психологом, контроль за приемом лекарств.
+                    .rehabilitation__action
+                        .rehabilitation__arrow
+                            i.icon-arrow-right
+                        .rehabilitation__label
+                            span Реабилитация
+                a.rehabilitation__item(href="#")
+                    .rehabilitation__title
+                        span Реабилитация при деменции
+                    .rehabilitation__img
+                        img(src="/img/description.webp" loading="lazy")
+                    .rehabilitation__text
+                        span Индивидуальные беседы и групповые занятия с психологом, ЛФК, контроль приема медикаментов, сбалансированное питание, профессиональный уход 24 часа в сутки.
+                    .rehabilitation__action
+                        .rehabilitation__arrow
+                            i.icon-arrow-right
+                        .rehabilitation__label
+                            span Реабилитация
+
+            .rehabilitation__button
+                a.btn(href="#") Все программы
+
+    // end rehabilitation
+
+    // begin callback
+    section#callback.callback.section
+        .container_center
+            h2.section__title.section__title_noneLine
+                span Заказать <br>
+                span обратный звонок
+            .callback__form
+                // begin form
+                form.form.form_grid(action="send.php")
+                    //- из какой формы на сайте
+                    input(type="hidden" name="subject" value="форма в футоре")
+                    //- проверка спама
+                    input(type="hidden" name="notspam" value="")
+
+                    .form__row
+                        input(type="text", placeholder="Ваше имя")
+                    .form__row
+                        input.tel_js(type="text", required placeholder="+375 (_ _) _ _ _ - _ _ - _ _")
+                    .form__row.form__row_70
+                        label.form__check
+                            input.check_checked_js(type="checkbox" checked="checked")
+                            span Согласен на <a href="#" target="_blank">обработку персональных данных</a>
+                    .form__row.form__row_30
+                        .button
+                            button.btn.btn_success.btn_didisabled_js(type="submit") Отправить заявку
+                // end form
+
+
+
+
+    // end callback
+
+    // begin photogallery
+    section#photogallery.photogallery.section
+        .container_center
+            h2.section__title.section__title_noneLine
+                span Жизнь в нашем <br>
+                span доме престарелых
+            .photogallery__content
+                .tabs-wrapper
+                    .tabs
+                        each item in ['Забота', 'Постояльцы', 'Мероприятия', 'Интерьер', 'Прогулки']
+                            span.tab=item
+
+                    .tabs-content
+                        each item in ['', '', '', '', '' ]
+                            .tab-item
+
+                                .photogallerySlider.swiper.photogallerySlider-js
+                                    .photogallerySlider.swiper-wrapper.itemForDataFancybox-js
+                                        each item in [ 1,2,3,4,5,6,7,8,9,10,11,12,13 ]
+                                            .photogallerySlider__slide.swiper-slide
+                                                a(href="/img/gallery.webp" data-fancybox data-type="image")
+                                                    img(src="/img/gallery.webp" loading="lazy")
+                                    .swiper-pagination.desktop
+                                    .swiper-scrollbar.mobile
+
+
+
+
+    // end photogallery

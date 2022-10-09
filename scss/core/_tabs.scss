@@ -1,40 +1,92 @@
+.tabs-wrapper {}
+
 .tabs {
-    border-bottom: 1px solid #eee;
     display: flex;
+    letter-spacing: 0.025em;
 
-    &__item {
-        padding: 5px 15px;
-        border: 1px solid #eee;
-        margin: 0 5px;
-        border-bottom: 0;
-        border-radius: 5px 5px 0 0;
-        cursor: pointer;
+    // padding-bottom: 0.75em;
+    // padding-bottom: 2em;
 
-        &:first-child {
-            margin-left: 0;
+    // margin: 0 -1.375em;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    @media (min-width: 768px) {
+        // overflow-y: auto;
+        padding: 0;
+        // margin: 0;
+
+    }
+}
+
+.tab {
+    position: relative;
+    cursor: pointer;
+    width: fit-content;
+    flex: none;
+
+    color: #949494;
+    font-weight: bold;
+    transition: 0.3s;
+
+    margin-right: 2.625em;
+
+    margin-bottom: 1.75em;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    font-size: 1em;
+
+    @media (min-width: 768px) {
+        margin-right: 2.75em;
+        margin-bottom: 3.75em;
+        font-size: 1.25em;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -0.5em;
+        left: 50%;
+        width: 0;
+        opacity: 0;
+        border-bottom: 0.1875em solid #4560CD;
+        transition: 0.3s;
+
+    }
+
+    &:hover {
+        color: #4560CD;
+
+        &:after {
+            left: 0;
+            width: 100%;
+            opacity: 1;
         }
+    }
 
-        &:hover {
-            background-color: #eee;
-        }
+    &.active {
+        color: #4560CD;
 
-        &.active {
-            background-color: blue;
-            color: #fff;
+        &:after {
+            left: 0;
+            width: 100%;
+            opacity: 1;
         }
     }
 
 }
 
-.tabContent {
-    padding: 15px 0;
-    border-bottom: 1px solid #eee;
+// .tabs-content {
+//     padding-top: 0;
+//     @media (min-width: 768px) {
+//         padding-top: 3.125em;
+//
+//     }
+//
+// }
 
-    &__item {
-        display: none;
-
-        &.active {
-            display: block;
-        }
-    }
-}
+.tab-item {}

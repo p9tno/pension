@@ -1,0 +1,72 @@
+.photogallery {
+    &__content {}
+
+    &Slider__slide {}
+
+}
+
+.photogallerySlider {
+    @media (min-width: 768px) {
+        padding-bottom: 1.5em;
+    }
+
+    &__slide {
+        height: 11.25em!important;
+        margin-top: 1.25em!important;
+
+        @media (min-width: 768px) {
+            height: 13.75em!important;
+        }
+
+        @media (min-width: 768px) {
+            a {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: linear-gradient(111.72deg, rgba(244, 151, 108, 0.7) 1.41%, rgba(43, 0, 153, 0.7) 95.81%);
+                    opacity: 0;
+                    transition: opacity 0.3s;
+                }
+
+                &:before {
+                    content: '\e906';
+                    font-family: 'icomoon';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 2;
+                    font-size: 3em;
+                    color: $color_white;
+                    letter-spacing: 0.065em;
+                    opacity: 0;
+                    transition: opacity 0.3s;
+
+                }
+
+                &:hover {
+                    &:after,
+                    &:before {
+                        opacity: 1;
+
+                    }
+
+                }
+            }
+
+        }
+
+    }
+
+}

@@ -67,9 +67,11 @@
 	}
 
 	&:disabled {
-		color: red;
 		cursor: not-allowed;
-		// pointer-events: none;
+
+		&:before {
+			width: 150%;
+		}
 	}
 
 	&_success {

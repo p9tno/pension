@@ -1,22 +1,34 @@
 $(document).ready(function() {
 
 
-    // const comments = new Swiper('.comments-swiper-js', {
-    //     loop: true,
-    //     slidesPerView: 1,
-    //     speed: 500,
-    //     // autoplay: {
-    //     //   delay: 5000,
-    //     // },
-    //     pagination: {
-    //         el: '.comments__dotted',
-    //     },
-    //     navigation: {
-    //         nextEl: '.icon-drop_right',
-    //         prevEl: '.icon-drop_left',
-    //     },
-    //     spaceBetween: 10,
-    // });
+    const comments = new Swiper('.photogallerySlider-js', {
+        speed: 500,
+        autoplay: {
+            delay: 5000,
+        },
+        slidesPerView: 1,
+        spaceBetween: 10,
+        scrollbar: {
+            el: ".swiper-scrollbar",
+            // hide: true,
+        },
+
+
+        breakpoints: {
+            768: {
+                spaceBetween: 30,
+                slidesPerView: 3,
+                grid: {
+                    rows: 3,
+                    // fill: "col",
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            },
+        }
+    });
 
     // const certificate = new Swiper('.certificate-swiper-js', {
     //     // loop: true,
