@@ -1,87 +1,134 @@
+.faq {
+
+    @media (min-width: 768px) {
+        .container_center {
+            position: relative;
+
+        }
+    }
+
+    &__bg {
+        @media (min-width: 768px) {
+            position: absolute;
+            top: 10em;
+            /* 80/16 */
+            // transform: translateY(-50%);
+            left: -9em;
+
+            width: 34.0625em;
+            height: 29.375em;
+            border-top-right-radius: 1.25em;
+            border-bottom-right-radius: 1.25em;
+        }
+    }
+
+    &__content {
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    &__collapse {
+        @media (min-width: 768px) {
+            width: 40em;
+        }
+
+    }
+
+}
+
 .faq__content {
-    border-top: 0.125em solid $color_primary;
+    // border-top: 0.125em solid $color_primary;
 }
 
 .collapse {
-    border-bottom: 0.125em solid $color_primary;
-    margin: 1.5em 0;
-
-    @media (min-width: 992px) {
-        margin: 2.5em 0;
-    }
+    letter-spacing: 0.065em;
+    margin: 1em 0;
 
     &__title {
-        font-family: $second_font_family;
-        font-weight: 600;
         line-height: 1;
-        margin-bottom: 2.5em;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
+        margin-bottom: 1em;
 
-        // @media (min-width: 992px) {
-        //     margin-bottom: 2.5em;
-        // }
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
+        background-color: $color_white;
+        border-radius: 1.25em;
+        padding: 1.75em 0.9375em;
 
-        span {
-            // width: 16em;
-            font-size: 1.125em;
-            line-height: 1.4;
-            cursor: pointer;
+        transition: 0.3s;
 
-            // @media (min-width: 992px) {
-            //     width: 40em;
-            //     font-size: 1.5em;
-            //     line-height: 1.4;
-            // }
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.875em 3.125em;
+
         }
 
-        &:after {
-            content: '\ea36';
-            font-family: 'icomoon';
-            font-size: 0.6667em;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 2.625em;
-            height: 2.625em;
-
-            border-radius: 50%;
-            color: $color_success;
-            background-color: #F1FBF6;
-            transform: rotate(0deg);
-
-            transition: 0.3s;
+        span {
             cursor: pointer;
+            font-size: 0.9375em;
 
+            @media (min-width: 768px) {
+                line-height: 1.4;
+                font-size: 1.25em;
+
+            }
+        }
+
+        @media (min-width: 768px) {
+            &:after {
+                content: '\e90d';
+                font-family: 'icomoon';
+                font-size: 1.25em;
+
+                border-radius: 50%;
+                color: $color_info;
+                transform: rotate(0deg);
+
+                transition: 0.3s;
+                cursor: pointer;
+
+            }
         }
 
         &.open {
-            &:after {
-                transform: rotate(180deg);
+            margin-bottom: 1.5em;
+
+            @media (max-width: 767px) {
+                background-color: #303C6C;
                 color: $color_white;
-                background-color: $color_success;
             }
+
+            @media (min-width: 768px) {
+                margin-bottom: 2.5em;
+
+                &:after {
+                    transform: rotate(90deg);
+                }
+
+            }
+
         }
     }
 
     &__body {
         display: none;
         margin-top: -0.5em;
-        color: $color_info;
 
         @media (min-width: 992px) {
             margin-top: -1.5em;
         }
 
         p {
-            margin: 0 0 1.5em;
-            line-height: 1.5;
-
-            @media (min-width: 992px) {
-                margin: 0 0 2.5em;
+            margin: 0 0 1em;
+            line-height: 1.3;
+            font-size: 0.8125em;
+            /* 13/16 */
+            @media (min-width: 768px) {
+                font-size: 1em;
             }
+
         }
 
         &.open {

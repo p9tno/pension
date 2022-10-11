@@ -1,0 +1,168 @@
+.reviews {
+    &__item {
+        padding-top: 9.5em;
+        position: relative;
+
+        @media (min-width: 768px) {
+            padding-top: 0;
+            position: initial;
+            display: flex;
+            align-items: center;
+
+        }
+
+        &:nth-child(2n) {
+            .reviews__content {
+                background-color: #FFF9E3;
+
+            }
+        }
+
+    }
+
+    &__content {
+        background-color: #DCFBFF;
+        letter-spacing: 0.065em;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
+
+        border-radius: 0.9375em;
+        padding: 1.25em 0.75em;
+
+        @media (min-width: 768px) {
+            border-radius: none;
+            border-top-left-radius: 0.9375em;
+            border-bottom-left-radius: 0.9375em;
+            padding: 1.5em 1.875em;
+
+        }
+
+    }
+
+    &__name {
+        margin-bottom: 0.875em;
+
+        span {
+            font-weight: bold;
+            font-size: 0.875em;
+            @media (min-width: 768px) {
+                font-size: 0.9375em;
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        margin-bottom: 1.125em;
+    }
+
+    &__star {}
+
+    &__date {
+        margin-left: 1.125em;
+
+        span {
+            font-size: 0.9375em;
+            color: #7E7E7E;
+        }
+    }
+
+    &__text {
+        margin-bottom: 1.125em;
+
+        span {
+            font-size: 0.8125em;
+            @media (min-width: 768px) {
+                font-size: 0.9375em;
+            }
+        }
+    }
+
+    &__link {
+        a {
+            text-decoration: none;
+            color: $color_warning;
+            font-weight: bold;
+            font-size: 0.875em;
+            @media (min-width: 768px) {
+                font-size: 0.9375em;
+            }
+
+        }
+    }
+
+    &__img {
+        border-radius: 0.9375em;
+        overflow: hidden;
+        width: 12.5em;
+        height: 10.875em;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        @media (min-width: 768px) {
+            position: initial;
+            top: auto;
+            left: auto;
+
+            flex: none;
+            width: 17.875em;
+            height: 24.75em;
+
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__action {
+        margin-top: 1em;
+        text-align: center;
+        @media (min-width: 768px) {
+            margin-top: 2em;
+
+        }
+    }
+
+}
+
+.reviewsSlider {
+    @media (min-width: 768px) {
+        margin-right: -9.25em;
+        // padding-bottom: 5em!important;
+
+    }
+
+    &__wrapper {}
+
+    &__slide {}
+
+    &__pagination {
+        @media (min-width: 768px) {
+            text-align: center;
+        }
+    }
+
+}
+
+.star {
+    display: flex;
+    color: $color_warning;
+
+    &__item {
+        margin-right: 0.45em;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+}
+
+.swiper-slide:nth-child(even) > .reviews__item > .reviews__content {
+    background-color: #FFF9E3;
+}

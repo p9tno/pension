@@ -143,6 +143,34 @@ $(document).ready(function() {
     // doDrop();
 
 
+    function collapsed() {
+        let toggle = $('[data-collapse]');
+
+        toggle.on('click', function() {
+            let id = $(this).data('collapse'),
+            body = $('[data-collapse-body="'+id+'"]'),
+            wrap = body.closest('[data-collapse-wrapper]');
+
+            if (!id) {
+                // $('[data-collapse-wrapper]').removeClass('open');
+                body = $(this).parent().find('[data-collapse-body]');
+                $(this).toggleClass('open');
+                if ($(this).hasClass('open')) {
+                    body.slideDown();
+                } else {
+                    body.slideUp();
+                }
+            } else if (id === 'all') {
+                body.slideDown();
+                toggle.addClass('open');
+            } else {
+                body.slideToggle();
+                $(this).toggleClass('open');
+            }
+        });
+    }
+    collapsed();
+
 
     $('.select').select2({
         placeholder: $(this).data('placeholder'),
@@ -187,6 +215,22 @@ $(document).ready(function() {
         }
     }
     // stikyMenu();
+
+    // https://github.com/michalsnik/aos
+    AOS.init({
+        disable: 'mobile',
+        // anchorPlacement: 'bottom-bottom',
+        duration: 1000, // values from 0 to 3000, with step 50ms
+        // offset: 20,
+        // once: true,
+    });
+
+    AOS.init({
+        disable: function () {
+            var maxWidth = 768;
+            return window.innerWidth < maxWidth;
+        }
+    });
 
     // start animate numbers
 

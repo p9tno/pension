@@ -8,6 +8,7 @@
 
     &__left {
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.19);
+        background-color: $color_white;
         border-radius: 1.25em;
         padding: 1.25em 0.9375em;
         margin-bottom: 3.75em;
@@ -329,4 +330,9 @@
         opacity: 0;
         transform: translate(-50%,-50%) scale(1.2);
     }
+}
+
+.aboutusSlider__slide {
+
+    height: 9.875em;
 }

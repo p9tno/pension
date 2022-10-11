@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 
-    const comments = new Swiper('.photogallerySlider-js', {
+    const photogallery = new Swiper('.photogallerySlider-js', {
         speed: 500,
         autoplay: {
             delay: 5000,
@@ -26,6 +26,58 @@ $(document).ready(function() {
                     el: ".swiper-pagination",
                     clickable: true,
                 },
+            },
+        }
+    });
+
+    const reviews = new Swiper('.reviewsSlider-js', {
+        speed: 500,
+        // autoplay: {
+        //     delay: 5000,
+        // },
+        slidesPerView: 1,
+        spaceBetween: 10,
+        scrollbar: {
+            el: ".swiper-scrollbar",
+            // hide: true,
+        },
+
+
+        breakpoints: {
+            768: {
+                spaceBetween: 30,
+                slidesPerView: 2,
+                pagination: {
+                    el: ".reviewsSlider__pagination",
+                    clickable: true,
+                },
+                // centeredSlides: true,
+            },
+        }
+    });
+
+    const blog = new Swiper('.blogSlider-js', {
+        speed: 500,
+        // autoplay: {
+        //     delay: 5000,
+        // },
+        slidesPerView: 1,
+        spaceBetween: 10,
+        scrollbar: {
+            el: ".swiper-scrollbar",
+            // hide: true,
+        },
+
+
+        breakpoints: {
+            768: {
+                spaceBetween: 30,
+                slidesPerView: 3,
+                // pagination: {
+                //     el: ".swiper-pagination",
+                //     clickable: true,
+                // },
+                // centeredSlides: true,
             },
         }
     });

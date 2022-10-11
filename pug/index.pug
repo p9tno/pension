@@ -5,7 +5,10 @@ block content
     // begin testnav
     section#testnav.testnav.section
         .container_center
-            h2.section__title Навигация
+
+            br
+            h2.section__title
+                span Навигация
             .testnav__content
                 ul
                     li
@@ -16,7 +19,8 @@ block content
     // begin example
     section#example.example.section
         .container_center
-            h2.section__title button example
+            h2.section__title
+                span button example
             .example__content
                 a(href="#").btn Все новости
                 br
@@ -38,148 +42,3 @@ block content
 
 
     // end example
-
-    //- // begin form
-    //- section#form.form.section
-    //-     .container_center
-    //-         .form__content
-    //-             h1.form__title Подать заявку на лизинг
-    //-             i.icon_close    
-    //-             form.form.form_grid(action="send.php")
-    //-                 //- из какой формы на сайте
-    //-                 input(type="hidden" name="subject" value="форма в футоре")
-    //-                 //- проверка спама
-    //-                 input(type="hidden" name="notspam" value="")
-    //-                 .form__row
-    //-                     input(type="text", required placeholder="Предмет лизинга*")
-    //-                 .form__row
-    //-                     input(type="number", placeholder="ИНН")
-    //-                 .form__row
-    //-                     input(type="number", placeholder="Стоимость")
-    //-                 .form__row
-    //-                     input(type="text", placeholder="Контактное лицо")
-    //-                 .form__row
-    //-                     input(type="number", placeholder="Колличество")
-    //-                 .form__row
-    //-                     input(type="text", required placeholder="Телефон*")
-    //-                 .form__row
-    //-                     input(type="number", placeholder="Аванс")
-    //-                 .form__label
-    //-                 .form__row
-    //-                     select.select(data-placeholder="Выбор")
-    //-                         option(value="")
-    //-                         option(value="Значение 1") Значение 1
-    //-                         option(value="Значение 2") Значение 2
-    //-                         option(value="Значение 3") Значение 3
-    //-                         option(value="Значение 4") Значение 4
-    //-                 .form__row
-    //-                     input(type="email", placeholder="E-mail")
-    //-                 .form__row
-    //-                     input(type="text", placeholder="Местонахождение")
-    //-                 .form__row.form__row_full
-    //-                     textarea(type="text", placeholder="Дополнительная информация")
-    //-                 .form__row.form__row_full
-    //-                     .form__grup
-    //-                         label.form__check
-    //-                             input(type="radio" name="test" checked="checked" value="test")
-    //-                             span radio 1
-    //-                         label.form__check
-    //-                             input(type="radio" name="test" value="test_2")
-    //-                             span radio 2
-    //- 
-    //-                 .form__row
-    //-                     span.form__text Поля, помеченные *, обязательны к заполнения
-    //-                 .form__row
-    //-                     .button
-    //-                         button.btn#btn_didisabled_js(type="submit") Отправить
-    //-                 .form__row.form__row_full
-    //-                     .form__privacy
-    //-                         label.form__check
-    //-                             input#check_checked(type="checkbox" checked="checked")
-    //-                             span Прочитал(-а) Пользовательское соглашение и соглашаюсь с <a href="#" target="_blank">политикой обработки персональных данных</a>
-    //- // end form
-    //- 
-    //- // Button trigger modal info
-    //- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#info") Click to open modal
-    //- // Begin Modal info
-    //- .modal.fade.info#info
-    //-     .modal-dialog
-    //-         .modal-content
-    //-             a(href="#" class="modal-close" data-dismiss="modal")
-    //-             .form__message
-    //- // End modal info
-
-
-    // begin faq
-    //- section#faq.faq.section
-    //-     .container_center
-    //-         h2.section__title F.A.Q.
-    //-         .faq__content
-    //-             .collapse(data-collapse-wrapper="")
-    //-                 .collapse__title.open(data-collapse="") 
-    //-                     span Вопрос о школе
-    //-                 // Добавить класс open для открытого состояния
-    //-                 .collapse__body.open(data-collapse-body="")
-    //-                     p Ежегодно на несколько дней Санкт‑Петербург становится столицей российского образования, открытой площадкой для дискуссий, обмена опытом, откровенного профессионального диалога ведущих специалистов в области просвещения.
-    //- 
-    //-                     p В рамках форума запланировано около 300 мероприятий: конференции, семинары, круглые столы, мастер-классы, дискуссионные площадки, форсайт‑сессии, педагогические олимпиады, конкурсы, квесты, презентации.
-    //- 
-    //-             each title in ['Структура рынка нейтрализует повторный контакт, не считаясь с затратами', 'Потребительский рынок упорядочивает рейтинг']
-    //- 
-    //-                 .collapse(data-collapse-wrapper="")
-    //-                     .collapse__title(data-collapse="")
-    //-                         span= title
-    //-                     .collapse__body(data-collapse-body="")
-    //-                         p Ежегодно на несколько дней Санкт‑Петербург становится столицей российского образования, открытой площадкой для дискуссий, обмена опытом, откровенного профессионального диалога ведущих специалистов в области просвещения.
-    //- 
-    //-                         p В рамках форума запланировано около 300 мероприятий: конференции, семинары, круглые столы, мастер-классы, дискуссионные площадки, форсайт‑сессии, педагогические олимпиады, конкурсы, квесты, презентации.
-
-    // end faq
-
-    // begin tabsPreview
-    //- section#tabsPreview.tabsPreview.section
-    //-     .container_center
-    //-         h2.section__title tabs Preview
-    //- 
-    //-         .tabsPreview__content
-    //-             .tabs
-    //-                 .tabs__item.active(data-tab="#plate-1") Item 1
-    //-                 .tabs__item(data-tab="#plate-2") Item 2
-    //-                 .tabs__item(data-tab="#plate-3") Item 3
-    //-                 .tabs__item(data-tab="#plate-4") Item 4
-    //- 
-    //-             .tabContent
-    //-                 .tabContent__item.active#plate-1  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, possimus.
-    //-                 .tabContent__item#plate-2  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, saepe. Tempora magnam eius nostrum beatae voluptas, quisquam laborum aliquid mollitia.
-    //-                 .tabContent__item#plate-3  Lorem ipsum dolor sit amet.
-    //-                 .tabContent__item#plate-4  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odio laboriosam nostrum, maxime quo molestiae exercitationem unde, beatae, possimus illum nemo pariatur cumque! Eos, adipisci! Minima, pariatur necessitatibus delectus porro, doloremque, accusamus itaque excepturi deleniti illo a consequuntur magnam et eaque facere numquam nemo. Ut, facilis, repellendus. Aut, magnam, aliquid.
-
-    // end tabsPreview
-
-
-    // begin sliderPreview
-    //- section#sliderPreview.sliderPreview.section
-    //-     .container_center
-    //-         h2.section__title slider Preview
-    //-         .sliderPreview__content
-    //- 
-    //-             .slider.js-slider
-    //-                 each item in [1, 2, 3, 4]
-    //-                     .slider__item
-    //-                         .content
-    //-                             h1=item
-
-
-    // end sliderPreview
-
-    // begin programsInfo
-    //- section.section
-    //-     .container_center
-    //-         .programsInfo
-    //-             each item in [{num: '12', text: 'Программ'},{num: '25', text: 'Компетенций'},{num: '29', text: 'Преподавателей <br>и экспертов'}]
-    //-                 .programsInfo__item
-    //-                     .programsInfo__number=item.num
-    //-                     .programsInfo__text!=item.text
-
-
-    // end programsInfo

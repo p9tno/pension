@@ -14,7 +14,7 @@
 
     }
 
-    overflow: hidden;
+    // overflow: hidden;
 
     &__wrap {
         background-color: $color_white;
@@ -60,8 +60,8 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            right: -42.375em;
-            width: 42.375em;
+            right: -41.3em;
+            width: 41.3em;
             height: 30.5em;
 
         }

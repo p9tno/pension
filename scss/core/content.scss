@@ -1,0 +1,168 @@
+.content {
+    &__content {
+        letter-spacing: 0.065em;
+
+        h2,
+        h3 {
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 1.4375em;
+            @media (min-width: 768px) {
+                font-size: 1.875em;
+
+            }
+        }
+
+        h3 {
+            font-size: 1.1875em;
+            @media (min-width: 768px) {
+                font-size: 1.5625em;
+            }
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 2.125em;
+            @media (min-width: 768px) {
+                padding-left: 4.5em;
+            }
+
+            li {
+                position: relative;
+                margin-bottom: 1em;
+
+                @media (min-width: 768px) {
+                    font-size: 1.25em;
+                }
+
+                &:before {
+                    display: block;
+                    content: '\e90b';
+                    font-family: 'icomoon';
+                    position: absolute;
+                    top: 0;
+                    left: -2em;
+                    @media (min-width: 768px) {
+                        left: -3em;
+                    }
+
+                    color: transparent;
+                    background-image: linear-gradient(180deg, #303C6C 0%, #F4976C 100%);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                }
+            }
+        }
+
+        ol {
+            list-style: none;
+            padding-left: 2.125em;
+            @media (min-width: 768px) {
+                padding-left: 4.5em;
+            }
+            counter-reset: line var(--line-num, 0);
+
+            li {
+                position: relative;
+                margin-bottom: 1em;
+                counter-increment: line;
+                @media (min-width: 768px) {
+                    font-size: 1.25em;
+                }
+
+                &:before {
+                    content: counter(line) '';
+                    position: absolute;
+                    top: 0;
+                    left: -1.75em;
+                    @media (min-width: 768px) {
+                        left: -2.75em;
+
+                    }
+
+                }
+            }
+        }
+
+        p {
+            @media (min-width: 768px) {
+                font-size: 1.25em;
+            }
+        }
+
+        blockquote {
+            position: relative;
+            border-radius: 0.8125em;
+            background: rgba(209, 253, 254, 0.6);
+            margin: 1em 0;
+            padding: 6.75em 0.9375em 1.25em;
+            text-align: center;
+
+            @media (min-width: 768px) {
+                text-align: left;
+                padding: 2.5em 2.8125em 2.5em 8.375em;
+            }
+
+            &:after,
+            &:before {
+                position: absolute;
+            }
+
+            &:before {
+                content: '\e908';
+                font-family: 'icomoon';
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 2.375em;
+                height: 2.375em;
+                border-radius: 50%;
+                background-color: $color_white;
+
+                top: 1em;
+                left: 50%;
+                transform: translateX(-50%);
+
+                @media (min-width: 768px) {
+                    top: 1em;
+                    left: 2.25em;
+                    transform: none;
+                }
+
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                background-color: $color_white;
+
+                top: 5em;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 5.375em;
+                height: 0.125em;
+
+                @media (min-width: 768px) {
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 7em;
+                    width: 0.125em;
+                    height: 70%;
+                }
+            }
+
+            p {
+                margin: 0;
+                color: #303C6C;
+                font-size: 0.875em;
+                @media (min-width: 768px) {
+                    font-size: 1.25em;
+
+                }
+            }
+
+        }
+    }
+}

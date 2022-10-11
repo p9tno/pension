@@ -55,6 +55,8 @@ block content
                         .button
                             button.btn.btn_form#btn_didisabled_js(type="submit") Отправить
 
+        .personeinfo__fon.fon.fon_left
+
     // end personeinfo
 
     // begin aboutus
@@ -113,13 +115,14 @@ block content
                                 i.icon-play
                         .video__label
                             span 3D - тур
+        .aboutus__fon.fon.fon_right
 
     // end aboutus
 
     // begin stocks
     section#stocks.stocks.section
         .container_center
-            h2.section__title
+            h2.section__title(data-aos="fade-up")
                 span Акции
             .stocks__grid
                 a.stocks__item.bg.info(href="#" style="background-image: url('/img/video_bg.webp')")
@@ -150,7 +153,7 @@ block content
         .container_center
 
             .description__wrap
-                h2.section__title.section__title_noneLine
+                h2.section__title.section__title_noneLine(data-aos="fade-up")
                     span Частный дом престарелых <br>
                     span “Забота и Любовь”
                 .description__bg.bg(href="#" style="background-image: url('/img/description.webp')")
@@ -158,13 +161,14 @@ block content
                     p Пансионат находится в тихом живописном месте на берегу реки Волма, по соседству с одноименным санаторием "Волма". В этом месте вы не просто получите заботу и любовь, это место вдали от шума и суеты. На территории вы можете увидеть яблоневый сад, пасеку пчёл и тепличные сооружения.
                     p При желании все это вы можете использовать как свой собственный огород.
                     p Мы разработали для вас все условия для комфортного проживания и создали уютный уголок для того, чтобы старость не была скучной и однообразной.
+        .description__fon.fon.fon_left
 
     // end description
 
     // begin rehabilitation
     section#rehabilitation.rehabilitation.section
         .container_center
-            h2.section__title
+            h2.section__title(data-aos="fade-up")
                 span Реабилитация <br>
                 span пожилых
             .rehabilitation__grid
@@ -217,13 +221,14 @@ block content
 
             .rehabilitation__button
                 a.btn(href="#") Все программы
+        .rehabilitation__fon.fon.fon_right
 
     // end rehabilitation
 
     // begin callback
     section#callback.callback.section
         .container_center
-            h2.section__title.section__title_noneLine
+            h2.section__title.section__title_noneLine(data-aos="fade-up")
                 span Заказать <br>
                 span обратный звонок
             .callback__form
@@ -247,15 +252,12 @@ block content
                             button.btn.btn_success.btn_didisabled_js(type="submit") Отправить заявку
                 // end form
 
-
-
-
     // end callback
 
     // begin photogallery
     section#photogallery.photogallery.section
         .container_center
-            h2.section__title.section__title_noneLine
+            h2.section__title.section__title_noneLine(data-aos="fade-up")
                 span Жизнь в нашем <br>
                 span доме престарелых
             .photogallery__content
@@ -269,15 +271,134 @@ block content
                             .tab-item
 
                                 .photogallerySlider.swiper.photogallerySlider-js
-                                    .photogallerySlider.swiper-wrapper.itemForDataFancybox-js
+                                    .photogallerySlider__wrapper.swiper-wrapper.itemForDataFancybox-js
                                         each item in [ 1,2,3,4,5,6,7,8,9,10,11,12,13 ]
                                             .photogallerySlider__slide.swiper-slide
                                                 a(href="/img/gallery.webp" data-fancybox data-type="image")
                                                     img(src="/img/gallery.webp" loading="lazy")
                                     .swiper-pagination.desktop
                                     .swiper-scrollbar.mobile
-
-
-
+        .photogallery__fon.fon.fon_left
 
     // end photogallery
+
+    // begin reviews
+    section#reviews.reviews.section
+        .container_center
+            h2.section__title(data-aos="fade-up")
+                span Отзывы
+
+            .reviewsSlider.swiper.reviewsSlider-js
+                .reviewsSlider__wrapper.swiper-wrapper
+                    each item in [1,2,3,4,5,6]
+                        .reviewsSlider__slide.swiper-slide
+                            .reviews__item
+                                .reviews__content
+                                    .reviews__name
+                                        span Логинов Владимир Николаевич
+                                    .reviews__info
+                                        .reviews__star
+                                            ul.star.list
+                                                each item in [1,2,3,4,5]
+                                                    li.star__item
+                                                        i.icon-star
+                                        .reviews__date
+                                            span 24.08.2022
+                                    .reviews__text
+                                        span Хочу сказать сотрудникам пансионата спасибо за неравнодушное отношение к пожилым людям. Вы делатее большое дело! Мой дедушка живет тут почти 2 месяца. Отзывается о ...
+                                    .reviews__link
+                                        a(href="#") Читать далее
+                                .reviews__img
+                                    img(src="/img/gallery.webp", loading="lazy")
+                //- .swiper-pagination.desktop
+                .swiper-scrollbar.mobile
+            .reviewsSlider__pagination.desktop
+
+            .reviews__action
+                a.btn(href="#") Все отзывы
+        .reviews__fon.fon.fon_right
+
+    // end reviews
+
+    // begin blog
+    section#blog.blog.section
+        .container_center
+            h2.section__title(data-aos="fade-up")
+                span Блог
+            .blogSlider.swiper.blogSlider-js
+                .blogSlider__wrapper.swiper-wrapper
+                    .blogSlider__slide.swiper-slide
+                        a.blog__item.bg.info(href="#" style="background-image: url('/img/video_bg.webp')")
+                            .blog__content
+                                .blog__date
+                                    span 28.06.2022
+                                .blog__title
+                                    span День рождения
+
+                    .blogSlider__slide.swiper-slide
+                        a.blog__item.bg.warning(href="#" style="background-image: url('/img/video_bg.webp')")
+                            .blog__content
+                                .blog__date
+                                    span 28.06.2022
+                                .blog__title
+                                    span День рождения
+
+                    .blogSlider__slide.swiper-slide
+                        a.blog__item.bg.full(href="#" style="background-image: url('/img/video_bg.webp')")
+                            .blog__content
+                                .blog__date
+                                    span 28.06.2022
+                                .blog__title
+                                    span День рождения
+                .swiper-scrollbar.mobile
+            .blog__action
+                a.btn(href="#") Все новости
+        .blog__fon.fon
+
+    // end blog
+
+    // begin faq
+    section#faq.faq.section
+        .container_center
+            .faq__bg.bg(style="background-image: url('/img/question-answer.webp')")
+            h2.section__title.section__title_noneLine(data-aos="fade-up")
+                span Часто задаваемые вопросы
+            .faq__content
+                .faq__collapse
+                    each item in ['Что такое Дом престарелых?', 'Почему дома для пожилых востребованы?', 'Есть ли в пансионате психолог?', 'Для чего нужно такое заведение?', 'Где прочесть отзывы о данном пансионате?', ]
+
+                        .collapse(data-collapse-wrapper="")
+                            .collapse__title(data-collapse="")
+                                span=item
+                            .collapse__body(data-collapse-body="")
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                                p  Lorem ipsum do
+        .faq__fon.fon
+    // end faq
+
+    // begin content
+    section#content.content.section
+        .container_center
+            .content__content
+                h2 Заголовок 2 уровень
+                h3 Заголовок 3 уровень
+
+                ul
+                    li Заведение, которое заботиться о пенсионерах, как о родных. Коммерческий хоспис для стариков и ветеранов в Минске;
+                    li Отличная возможность подарить своему родственнику спокойную и счастливую старость под присмотром квалифицированных сотрудников.
+                    li Отличная возможность подарить своему родственнику спокойную и счастливую старость под присмотром квалифицированных сотрудников.
+
+                br
+
+                ol
+                    li Заведение, которое заботиться о пенсионерах, как о родных. Коммерческий хоспис для стариков и ветеранов в Минске;
+                    li Отличная возможность подарить своему родственнику спокойную и счастливую старость под присмотром квалифицированных сотрудников.
+                    li Отличная возможность подарить своему родственнику спокойную и счастливую старость под присмотром квалифицированных сотрудников.
+                br
+
+                blockquote
+                    p Отличная возможность подарить своему родственнику спокойную и счастливую старость под присмотром квалифицированных сотрудников.
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+    // end content

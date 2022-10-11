@@ -47,6 +47,7 @@ body {
 }
 
 .section {
+	position: relative;
 	padding: 2.5em 0;
 
 	&:first-child {
@@ -128,6 +129,26 @@ body {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+}
+
+.counter-wrap {
+	counter-reset: line var(--line-num, 0);
+}
+
+.counter-item {
+	counter-increment: line;
+
+	.counter-el {
+		&:before {
+			content: '0';
+
+		}
+
+		&:after {
+			content: counter(line) ' ';
+		}
+
+	}
 }
 
 // * {

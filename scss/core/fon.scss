@@ -1,0 +1,126 @@
+.fon {
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+
+    &_left {
+        left: 0;
+    }
+
+    &_right {
+        right: 0;
+    }
+}
+
+.personeinfo__fon {
+    top: 1em;
+    left: -5em;
+    width: 23.5em;
+    height: 40em;
+    background-image: url("/img/personeinfo__fon.webp");
+
+    @media (min-width: 768px) {
+        top: 2em;
+        width: 23.5em;
+        height: 40em;
+    }
+}
+
+.aboutus__fon {
+    top: 26em;
+    width: 8.75em;
+    height: 37.5em;
+    background-image: url("/img/aboutus__fon_mob.webp");
+
+    @media (min-width: 768px) {
+        top: 30em;
+        width: 30.625em;
+        height: 45em;
+        background-image: url("/img/aboutus__fon.webp");
+    }
+}
+
+.description__fon {
+    width: 14.375em;
+    height: 45em;
+    background-image: url("/img/description__fon.webp");
+    top: 0;
+    @media (min-width: 768px) {
+        top: 7em;
+
+    }
+}
+
+.rehabilitation__fon {
+    top: -1em;
+    width: 13.5em;
+    height: 58.125em;
+    background-image: url("/img/rehabilitation__fon_mob.webp");
+
+    @media (min-width: 768px) {
+        top: 11em;
+        width: 25.625em;
+        height: 58.125em;
+        background-image: url("/img/rehabilitation__fon.webp");
+    }
+}
+
+.photogallery__fon {
+    top: -15em;
+    width: 8.5em;
+    height: 50em;
+    background-image: url("/img/photogallery__fon_mob.webp");
+
+    @media (min-width: 768px) {
+        top: 12em;
+        width: 22.25em;
+        height: 50em;
+        background-image: url("/img/photogallery__fon.webp");
+    }
+}
+
+.reviews__fon {
+    @media (min-width: 768px) {
+        top: -10em;
+        width: 21.875em;
+        height: 69.75em;
+        background-image: url("/img/reviews__fon.webp");
+
+    }
+}
+
+.blog__fon {
+    right: 0;
+    top: -2em;
+    width: 14.625em;
+    height: 47em;
+    background-image: url("/img/blog__fon_mob.webp");
+
+    @media (min-width: 768px) {
+        top: -21em;
+        left: 0;
+        width: 31em;
+        height: 47em;
+        background-image: url("/img/blog__fon.webp");
+    }
+}
+
+.faq__fon {
+    top: 22em;
+    right: auto;
+    left: 0;
+    width: 10.125em;
+    height: 35.125em;
+    background-image: url("/img/faq__fon_mob.webp");
+
+    @media (min-width: 768px) {
+        top: 10em;
+        left: auto;
+        right: 0;
+        width: 17.75em;
+        height: 35.125em;
+        background-image: url("/img/faq__fon.webp");
+    }
+}

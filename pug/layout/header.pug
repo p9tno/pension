@@ -39,10 +39,10 @@ header.header
                             a(href="#") Услуги
                                 i.icon-arrow-bottom
                             ul.sub-menu
-                                li.menu-item
-                                    a(href="#") Услуга 1
-                                li.menu-item
-                                    a(href="#") Услуга Услуга 2
+                                each item in ['Круглосуточное наблюдение', 'Контроль приема лекарств', '5-ти разовое питание', 'Реабилитация после инфаркта', 'Гигиенический уход', 'Организация досуга', 'Психологическая поддержка', 'Помощь в госпитализации', 'Забор анализов', 'Для инвалидов по зрению', 'Для больных склерозом', 'Для людей с деменцией', 'Для больных с сахарным диабетом' ]
+                                    li.menu-item
+                                        a(href="#")=item
+
                         li.menu-item
                             a(href="#") Фото
                         li.menu-item
@@ -55,9 +55,9 @@ header.header
                             a(href="#") Города
                                 i.icon-arrow-bottom
                             ul.sub-menu
-                                each item in [1, 2, 3, 4]
+                                each item in ['Брест', 'Гродно', 'Витебск', 'Могилев', 'Гомель' ]
                                     li.menu-item
-                                        a(href="#") Минск
+                                        a(href="#")=item
                         li.menu-item
                             a(href="#") Вакансии
                         li.menu-item
