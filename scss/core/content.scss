@@ -1,4 +1,14 @@
 .content {
+    &__date {
+        letter-spacing: 0.03em;
+
+        span {
+            color: $color_warning;
+            font-size: 1.25em;
+            font-weight: 700;
+        }
+    }
+
     &__content {
         letter-spacing: 0.065em;
 
@@ -164,5 +174,102 @@
             }
 
         }
+
+        .wp-block-table {
+            margin: 0;
+            overflow-y: hidden;
+            overflow-x: auto;
+            width: 100%;
+
+            @media (min-width: 768px) {
+                width: 46.5em;
+                overflow-y: auto;
+            }
+
+            table {
+                width: 100%;
+                text-align: left;
+                border-spacing: 1em 1em;
+                padding-bottom: 1em;
+                font-size: 0.5em;
+                @media (min-width: 768px) {
+                    font-size: 1em;
+                    padding-bottom: 0;
+
+                }
+            }
+
+            em {
+                padding: 0.625em 0;
+                margin: 0.625em 0;
+            }
+
+            td,
+            th {
+                font-size: 1.25em;
+            }
+
+            thead {
+
+                // border-radius: 0.9375em;
+
+                th {
+                    padding: 1.375em 1.875em;
+                    border-radius: 0.9375em;
+                    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+                    background-color: $color_white;
+
+                    // &:first-child {
+                    //     border-top-left-radius: 0.9375em;
+                    //     border-bottom-left-radius: 0.9375em;
+                    // }
+                    //
+                    // &:last-child {
+                    //     border-top-right-radius: 0.9375em;
+                    //     border-bottom-right-radius: 0.9375em;
+                    // }
+                }
+            }
+
+            tbody {
+                tr {
+                    transition: background-color 0.4s;
+                }
+
+                td {
+                    padding: 1.125em 1.875em;
+                    background-color: $color_white;
+                    border-radius: 0.9375em;
+                    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+                }
+
+                tr {
+                    // &:nth-child(2n) {
+                    //     background-color: #ebebeb;
+                    // }
+                    //
+                    // &:hover {
+                    //     background-color: #c5c3c3;
+                    // }
+                }
+
+            }
+
+            // tfoot {
+            //     background-color: $main_color;
+            //     color: $color_white;
+            //
+            //     td {
+            //         border-right: 0.125em solid $color_white;
+            //         /* 2/16 */
+            //
+            //         &:last-child {
+            //             border-right: none;
+            //         }
+            //     }
+            //
+            // }
+        }
+
     }
 }

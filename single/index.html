@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/aos.css"/>
-    <link rel="stylesheet" type="text/css" href="css/fancybox.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aos.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/fancybox.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
   </head>
   <body>
     <div class="wrapper">
@@ -77,31 +77,47 @@
         </div>
       </header>
       <main class="main_content">
-        <!-- begin testnav-->
-        <section class="testnav section" id="testnav">
-          <div class="container_center"><br/>
-            <h2 class="section__title"><span>Навигация</span></h2>
-            <div class="testnav__content">
-              <ul>
-                <li><a href="home">главная</a></li>
-                <li><a href="services">Услуги</a></li>
-                <li><a href="archive">Архив</a></li>
-                <li><a href="single">Статья</a></li>
-                <li><a href="about">О пансионате</a></li>
-                <li><a href="contacts">Контакты</a></li>
-              </ul>
+        <!-- begin breadcrumbs-->
+        <div class="breadcrumbs section">
+          <div class="container_center">
+            <div class="kama_breadcrumbs"><span><a href="#"><span>Главная</span></a></span><span class="kb_sep"> <i class="icon-arrow-bottom"></i></span><span class="kb_title">Статья</span></div>
+          </div>
+        </div>
+        <!-- end breadcrumbs-->
+        <!-- begin head-->
+        <section class="head section" id="head">
+          <div class="container_center">
+            <div class="head__bg bg" style="background-image: url('/img/description.webp')">
+              <h1 class="head__title"><span>Статья</span></h1>
             </div>
           </div>
         </section>
-        <!-- end testnav-->
-        <!-- begin example-->
-        <section class="example section" id="example">
+        <!-- end head-->
+        <!-- begin content-->
+        <section class="content section" id="content">
           <div class="container_center">
-            <h2 class="section__title"><span>button example</span></h2>
-            <div class="example__content"><a class="btn" href="#">Все новости</a><br/><br/><br/><a class="btn btn_success" href="#">Отправить заявку</a><br/><br/><br/><a class="btn btn_info" href="#">Все акции и скидки</a><br/><br/><br/><a class="btn btn_sm btn_info" href="#">О пансионате</a><br/><br/><br/><a class="btn btn_form" href="#">Отправить</a></div>
+            <div class="content__date"><span>24.05.2022</span></div>
+            <div class="content__content">
+              <h2>Заголовок 2 уровень</h2>
+              <h3>Заголовок 3 уровень</h3>
+              <ul>
+                <li>Заведение, которое заботиться о пенсионерах, как о родных. Коммерческий хоспис для стариков и ветеранов в Минске;</li>
+                <li>Отличная возможность подарить своему родственнику спокойную и счастливую старость под присмотром квалифицированных сотрудников.</li>
+                <li>Отличная возможность подарить своему родственнику спокойную и счастливую старость под присмотром квалифицированных сотрудников.</li>
+              </ul><br/>
+              <ol>
+                <li>Заведение, которое заботиться о пенсионерах, как о родных. Коммерческий хоспис для стариков и ветеранов в Минске;</li>
+                <li>Отличная возможность подарить своему родственнику спокойную и счастливую старость под присмотром квалифицированных сотрудников.</li>
+                <li>Отличная возможность подарить своему родственнику спокойную и счастливую старость под присмотром квалифицированных сотрудников.</li>
+              </ol><br/>
+              <blockquote>
+                <p>Отличная возможность подарить своему родственнику спокойную и счастливую старость под присмотром квалифицированных сотрудников.</p>
+              </blockquote>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
           </div>
         </section>
-        <!-- end example-->
+        <!-- end content-->
       </main>
       <footer class="footer">
         <div class="footer__content">
@@ -182,16 +198,16 @@
         </div>
       </div>
       <!-- End modal info-->
-      <script src="js/jquery.js"></script>
-      <script src="js/jquery.maskedinput.min.js"></script>
-      <script src="js/modal.js"></script>
-      <script src="js/swiper-bundle.min.js"></script>
-      <script src="js/slider.js"></script>
-      <script src="js/select2.min.js"></script>
-      <script src="js/aos.js"></script>
-      <script src="js/fancybox.min.js"></script>
-      <script src="js/form.js"></script>
-      <script src="js/function.js"></script>
+      <script src="../js/jquery.js"></script>
+      <script src="../js/jquery.maskedinput.min.js"></script>
+      <script src="../js/modal.js"></script>
+      <script src="../js/swiper-bundle.min.js"></script>
+      <script src="../js/slider.js"></script>
+      <script src="../js/select2.min.js"></script>
+      <script src="../js/aos.js"></script>
+      <script src="../js/fancybox.min.js"></script>
+      <script src="../js/form.js"></script>
+      <script src="../js/function.js"></script>
     </div>
   </body>
 </html>

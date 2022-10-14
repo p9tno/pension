@@ -1,0 +1,50 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.section
+        .container_center
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+                span.kb_sep 
+                    i.icon-arrow-bottom
+                span.kb_title Блог
+
+    // end breadcrumbs
+
+    // begin head
+    section#head.head.section
+        .container_center
+            .head__bg.bg(style="background-image: url('/img/description.webp')")
+                h1.head__title
+                    span Блог
+
+    // end head
+
+    // begin archivepage
+    section#archivepage.archivepage.section
+        .container_center
+            .archivepage__grid
+                each item in ['', '', '', '','', '']
+                    .archivepage__item
+                        .archivepage__img
+                            img(src="/img/gallery.webp", alt="alt")
+                        .archivepage__title
+                            span Заголовок
+                        .archivepage__date
+                            span 24.05.2022
+                        .archivepage__text
+                            span Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        .archivepage__link
+                            a(href="#") Подробнее
+            .archivepage__action
+                a.btn.btn_info(href="#") Показать еще
+
+
+
+    // end archivepage

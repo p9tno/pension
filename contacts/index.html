@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/aos.css"/>
-    <link rel="stylesheet" type="text/css" href="css/fancybox.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aos.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/fancybox.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
   </head>
   <body>
     <div class="wrapper">
@@ -77,31 +77,65 @@
         </div>
       </header>
       <main class="main_content">
-        <!-- begin testnav-->
-        <section class="testnav section" id="testnav">
-          <div class="container_center"><br/>
-            <h2 class="section__title"><span>Навигация</span></h2>
-            <div class="testnav__content">
-              <ul>
-                <li><a href="home">главная</a></li>
-                <li><a href="services">Услуги</a></li>
-                <li><a href="archive">Архив</a></li>
-                <li><a href="single">Статья</a></li>
-                <li><a href="about">О пансионате</a></li>
-                <li><a href="contacts">Контакты</a></li>
-              </ul>
+        <!-- begin breadcrumbs-->
+        <div class="breadcrumbs section">
+          <div class="container_center">
+            <div class="kama_breadcrumbs"><span><a href="#"><span>Главная</span></a></span><span class="kb_sep"> <i class="icon-arrow-bottom"></i></span><span class="kb_title">Контакты</span></div>
+          </div>
+        </div>
+        <!-- end breadcrumbs-->
+        <!-- begin head-->
+        <section class="head section" id="head">
+          <div class="container_center">
+            <div class="head__bg bg" style="background-image: url('/img/description.webp')">
+              <h1 class="head__title"><span>Контакты</span></h1>
             </div>
           </div>
         </section>
-        <!-- end testnav-->
-        <!-- begin example-->
-        <section class="example section" id="example">
+        <!-- end head-->
+        <!-- begin contacts-->
+        <section class="contacts section" id="contacts">
           <div class="container_center">
-            <h2 class="section__title"><span>button example</span></h2>
-            <div class="example__content"><a class="btn" href="#">Все новости</a><br/><br/><br/><a class="btn btn_success" href="#">Отправить заявку</a><br/><br/><br/><a class="btn btn_info" href="#">Все акции и скидки</a><br/><br/><br/><a class="btn btn_sm btn_info" href="#">О пансионате</a><br/><br/><br/><a class="btn btn_form" href="#">Отправить</a></div>
+            <div class="contacts__row">
+              <div class="contacts__col">
+                <div class="phone"><a class="phone__link" href="tel:+375443979911"><i class="phone__icon icon-phone"></i><span class="phone__content">+375 (44) 397 99 11</span><span class="phone__time"> (24 / 7)</span></a></div>
+              </div>
+              <div class="contacts__col">
+                <div class="social">
+                  <div class="social__label"><span>Написать нам</span></div>
+                  <ul class="social__list">
+                    <li class="social__item"><a class="social__link social__viber" href="viber://chat?number=%2B375443979911"><i class="icon-viber"></i></a></li>
+                    <li class="social__item"><a class="social__link social__whatsapp" href="https://wa.me/+375443979911"><i class="icon-whatsapp"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="contacts__col">
+                <div class="email"><a class="email__link" href="mailto:pansionat1111@gmai.com"><i class="email__icon icon-mail"></i><span class="email__content">pansionat1111@gmai.com</span></a></div>
+              </div>
+            </div>
+            <div class="contacts__row">
+              <div class="contacts__col">
+                <div class="location"><i class="icon-location"></i><span>Республика Беларусь 223213 Минская область, Червеньский район, Клинокского с/c, поселок Озерный</span></div>
+              </div>
+            </div>
+            <div class="contacts__map">
+              <div class="map">
+                <div class="map__content"><iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aab6211ea9216f6781dbbf2185a6684ca69711cf9f082e9cad8374cbe54b8386b&amp;source=constructor" width="100%" height="449" frameborder="0"></iframe></div>
+              </div>
+            </div>
           </div>
         </section>
-        <!-- end example-->
+        <!-- end contacts-->
+        <!-- begin content-->
+        <section class="content section" id="content">
+          <div class="container_center">
+            <div class="content__content">
+              <h2>Как добраться без навигатора</h2>
+              <p>По Могилевскому направлению едем до указателя санаторий "Волма" ориентировочно 39-45 км, поворачиваем и едем прямо до указателя санаторий "Волма", съезжаем праве и 700-800 м едем до санатория, перед ним поворачиваем на право и видим базу отдыха - Пансионат Забота и любовь.</p>
+            </div>
+          </div>
+        </section>
+        <!-- end content-->
       </main>
       <footer class="footer">
         <div class="footer__content">
@@ -182,16 +216,16 @@
         </div>
       </div>
       <!-- End modal info-->
-      <script src="js/jquery.js"></script>
-      <script src="js/jquery.maskedinput.min.js"></script>
-      <script src="js/modal.js"></script>
-      <script src="js/swiper-bundle.min.js"></script>
-      <script src="js/slider.js"></script>
-      <script src="js/select2.min.js"></script>
-      <script src="js/aos.js"></script>
-      <script src="js/fancybox.min.js"></script>
-      <script src="js/form.js"></script>
-      <script src="js/function.js"></script>
+      <script src="../js/jquery.js"></script>
+      <script src="../js/jquery.maskedinput.min.js"></script>
+      <script src="../js/modal.js"></script>
+      <script src="../js/swiper-bundle.min.js"></script>
+      <script src="../js/slider.js"></script>
+      <script src="../js/select2.min.js"></script>
+      <script src="../js/aos.js"></script>
+      <script src="../js/fancybox.min.js"></script>
+      <script src="../js/form.js"></script>
+      <script src="../js/function.js"></script>
     </div>
   </body>
 </html>

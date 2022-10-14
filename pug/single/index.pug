@@ -1,0 +1,55 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.section
+        .container_center
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+                span.kb_sep 
+                    i.icon-arrow-bottom
+                span.kb_title Статья
+
+    // end breadcrumbs
+
+    // begin head
+    section#head.head.section
+        .container_center
+            .head__bg.bg(style="background-image: url('/img/description.webp')")
+                h1.head__title
+                    span Статья
+
+    // end head
+
+    // begin content
+    section#content.content.section
+        .container_center
+            .content__date
+                span 24.05.2022
+            .content__content
+                h2 Заголовок 2 уровень
+                h3 Заголовок 3 уровень
+
+                ul
+                    li Заведение, которое заботиться о пенсионерах, как о родных. Коммерческий хоспис для стариков и ветеранов в Минске;
+                    li Отличная возможность подарить своему родственнику спокойную и счастливую старость под присмотром квалифицированных сотрудников.
+                    li Отличная возможность подарить своему родственнику спокойную и счастливую старость под присмотром квалифицированных сотрудников.
+
+                br
+
+                ol
+                    li Заведение, которое заботиться о пенсионерах, как о родных. Коммерческий хоспис для стариков и ветеранов в Минске;
+                    li Отличная возможность подарить своему родственнику спокойную и счастливую старость под присмотром квалифицированных сотрудников.
+                    li Отличная возможность подарить своему родственнику спокойную и счастливую старость под присмотром квалифицированных сотрудников.
+                br
+
+                blockquote
+                    p Отличная возможность подарить своему родственнику спокойную и счастливую старость под присмотром квалифицированных сотрудников.
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+    // end content

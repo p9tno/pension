@@ -69,6 +69,49 @@ $(document).ready(function() {
     activeNav();
 
 
+
+    function showMore() {
+        let count = $('.singleGallery__item').length,
+        start = 9,
+        show = 9;
+
+        $('.singleGallery__item').addClass('d-none');
+        $('.singleGallery__item:lt(' + start + ')').removeClass('d-none');
+
+        $('.show_more_js').click(function(e) {
+            e.preventDefault();
+            $(this).addClass('loading');
+
+            let load = $(this).data('load'),
+                more = $(this).data('more');
+
+            start = (start + show <= count) ? start + show : count;
+
+            $(this).text(load);
+
+            setTimeout(() => {
+
+                $('.singleGallery__item:lt(' + start + ')').removeClass('d-none');
+
+                if ($('.singleGallery__item:not(.d-none)').length == count) {
+                    $(this).parent().remove();
+                }
+
+                $(this).removeClass('loading');
+
+
+                $(this).text(more);
+            }, 1000);
+
+
+        });
+
+
+    }
+    showMore();
+    // a(href="#" data-load="загрузкка" data-more="Показать еще работы").show_more_js Показать еще работы
+
+
     // function collapsed() {
     //     let toggle = $('[data-collapse]');
     //

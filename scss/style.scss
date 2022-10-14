@@ -18,6 +18,11 @@
 @import 'core/photogallery';
 @import 'core/reviews';
 @import 'core/blog';
+@import 'core/contacts';
+
+@import 'core/head';
+@import 'core/archivepage';
+@import 'core/singleGallery';
 
 @import 'core/content';
 
@@ -25,10 +30,9 @@
 
 @import 'core/form';
 
-// @import 'core/breadcrumb';
-
 // @import 'core/pagination';
 
+@import 'core/breadcrumb';
 @import 'core/buttons';
 
 // @import 'core/video';

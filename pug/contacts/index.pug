@@ -1,0 +1,79 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.section
+        .container_center
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+                span.kb_sep 
+                    i.icon-arrow-bottom
+                span.kb_title Контакты
+
+    // end breadcrumbs
+
+    // begin head
+    section#head.head.section
+        .container_center
+            .head__bg.bg(style="background-image: url('/img/description.webp')")
+                h1.head__title
+                    span Контакты
+
+    // end head
+
+    // begin contacts
+    section#contacts.contacts.section
+        .container_center
+            .contacts__row
+                .contacts__col
+                    .phone
+                        a(href="tel:+375443979911").phone__link
+                            i.phone__icon.icon-phone
+                            span.phone__content +375 (44) 397 99 11
+                            span.phone__time  (24 / 7)
+                .contacts__col
+                    .social
+                        .social__label
+                            span Написать нам
+                        ul.social__list
+                            li.social__item
+                                a(href="viber://chat?number=%2B375443979911").social__link.social__viber
+                                    i.icon-viber
+                            li.social__item
+                                a(href="https://wa.me/+375443979911").social__link.social__whatsapp
+                                    i.icon-whatsapp
+                .contacts__col
+                    .email
+                        a(href="mailto:pansionat1111@gmai.com").email__link
+                            i.email__icon.icon-mail
+                            span.email__content pansionat1111@gmai.com
+            .contacts__row
+                .contacts__col
+                    .location
+                        i.icon-location
+                        span Республика Беларусь 223213 Минская область, Червеньский район, Клинокского с/c, поселок Озерный
+
+            .contacts__map
+                .map
+                    .map__content
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aab6211ea9216f6781dbbf2185a6684ca69711cf9f082e9cad8374cbe54b8386b&amp;source=constructor" width="100%" height="449" frameborder="0"></iframe>
+
+
+
+
+    // end contacts
+
+    // begin content
+    section#content.content.section
+        .container_center
+            .content__content
+                h2 Как добраться без навигатора
+                p По Могилевскому направлению едем до указателя санаторий "Волма" ориентировочно 39-45 км, поворачиваем и едем прямо до указателя санаторий "Волма", съезжаем праве и 700-800 м едем до санатория, перед ним поворачиваем на право и видим базу отдыха - Пансионат Забота и любовь.
+
+
+    // end content
